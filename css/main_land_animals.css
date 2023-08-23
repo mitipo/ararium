@@ -1,5 +1,11 @@
 /* 육지동물 소개 */
 .landanimal {
+  position: relative;
+  height: 100vh;
+  background: beige;
+  background: url("../images/main2.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 @media all and (max-width: 1680px){
   

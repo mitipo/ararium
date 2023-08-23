@@ -20,6 +20,11 @@ html {
   font-size: 16px;
 }
 body {
-  /* font 셋팅 필요 */
-  font-size: 1rem;
+  font-family: 'NanumSquareNeo-Variable', 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: -0.68px;
+  word-break: keep-all;
+  color: #000;
+  font-weight: 400;
 }

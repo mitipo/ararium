@@ -1,5 +1,13 @@
 /* 비주얼 */
 .visual {
+  position: relative;
+  height: 100vh;
+  background: url("../images/main_gif.gif") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.visual::after {
+  clear: both;
 }
 @media all and (max-width: 1680px){
   
