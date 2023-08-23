@@ -16,4 +16,12 @@ window.onload = function() {
       this.querySelector(".submenu").style.height = "0px";
     });
   });
+
+  // 햄버거바 클릭하면 메뉴가 아래로 펼쳐짐
+  const toggleBar = document.querySelector(".navbar_toggleBtn");
+  let gnb = document.querySelector(".gnb");
+
+  toggleBar.addEventListener("click", function() {
+    gnb.classList.add("active");
+  });
 };
