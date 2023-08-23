@@ -2,9 +2,6 @@
 .deepseafish {
   position: relative;
   height: 100vh;
-  background: url("../images/main4.jpg") no-repeat;
-  background-position: top center;
-  background-size: cover;
 }
 @media all and (max-width: 1680px){
   

@@ -1,0 +1,8 @@
+/* 바다 */
+.sea {
+  position: relative;
+  height: 200vh;
+  background: url("../images/main3-4.jpg") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
