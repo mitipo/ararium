@@ -1,136 +1,169 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <!-- SEO적용 -->
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="format-detection" content="telephone=no"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-	<meta name="keywords" content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"/>
-  <meta property="og:title" content="아라리움">
-	<meta property="keyword" content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"/>
-  <meta property="og:url" content="https://ararium.com/">
-  <meta property="og:image" content="https://ararium.com/img/url_image.jpg">
-  <meta property="og:description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="아라리움">
-  <meta name="twitter:url" content="https://ararium.com/">
-  <meta name="twitter:image" content="https://ararium.com/img/logo.png">
-  <meta name="twitter:description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-  <!-- favicon -->
-  <link rel="stortcut icon" href="images/favi.png" type="image/x-icon"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>아라리움</title>
-  <!-- swiper 링크 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/e2b37e629b.js" crossorigin="anonymous"></script>
-  <!-- aos -->
-  <link rel="stylesheet" href="css/aos.css">
-  <script src="js/aos.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- css -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
-  <!--[if lt IE 9]>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- SEO적용 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <meta
+      name="keywords"
+      content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"
+    />
+    <meta property="og:title" content="아라리움" />
+    <meta
+      property="keyword"
+      content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"
+    />
+    <meta property="og:url" content="https://ararium.com/" />
+    <meta property="og:image" content="https://ararium.com/img/url_image.jpg" />
+    <meta
+      property="og:description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="아라리움" />
+    <meta name="twitter:url" content="https://ararium.com/" />
+    <meta name="twitter:image" content="https://ararium.com/img/logo.png" />
+    <meta
+      name="twitter:description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <!-- favicon -->
+    <link rel="stortcut icon" href="images/favi.png" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>아라리움</title>
+    <!-- swiper 링크 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e2b37e629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <script src="js/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.js"></script>
   [endif]-->
-  <script src="js/prefixfree.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="js/header.js" defer></script>
-  <script src="js/main.js"></script>
-  <script src="js/main_visual.js"></script>
-  <script src="js/main_land_animals.js"></script>
-  <script src="js/main_marine_animals.js"></script>
-  <script src="js/main_deep_sea_fish.js"></script>
-  <script src="js/main_event.js"></script>
-  <script src="js/footer.js"></script>
-</head>
-<body>
-  <div class="wrap">
-    <!-- 상단 -->
-    <header class="header">
-      <div class="inner">
-        <!-- 로고 -->
-        <a href="index.html" alt="아라리움" class="logo">
-          <img src="images/logo_w02.png" alt="아라리움">
-        </a>
-        <!-- 메뉴 -->
-        <nav class="nav">
-          <ul class="gnb">
-            <li><a href="#" alt="아라리움">아라리움</a>
-            <ul class="submenu">
-              <li><a href="#" alt="공지사항">공지사항</a></li>
-              <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
-              <li><a href="#" alt="관람안내">관람안내</a></li>
-              <li><a href="#" alt="보도자료">보도자료</a></li>
-              <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
-            <ul class="submenu">
-              <li><a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a></li>
-              <li><a href="#" alt="연간이용권 고객 혜택">연간이용권 고객 혜택</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a>
-            <ul class="submenu">
-              <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
-              <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
-              <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
-              <li><a href="#" alt="공연 체험 시간표">공연 체험 시간표</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="이벤트">이벤트</a></li>
-          </ul>
-          <a href="#" class="navbar_toggleBtn">
-            <i class="fa-solid fa-bars"></i>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/main.js"></script>
+    <script src="js/main_visual.js"></script>
+    <script src="js/main_land_animals.js"></script>
+    <script src="js/main_marine_animals.js"></script>
+    <script src="js/main_deep_sea_fish.js"></script>
+    <script src="js/main_event.js"></script>
+    <script src="js/footer.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 상단 -->
+      <header class="header">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="index.html" alt="아라리움" class="logo">
+            <img src="images/logo_w02.png" alt="아라리움" />
           </a>
-        </nav>
-      </div>
-    </header>
-    <!-- 비주얼 -->
-    <section class="visual clearfix">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 육지동물 소개 -->
-    <section class="landanimal clearfix">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 바다 -->
-    <section class="sea">
-      <!-- 바다동물 소개 -->
-      <section class="marineanimal clearfix">
-        <div class="inner">
-          
+          <!-- 메뉴 -->
+          <nav class="nav">
+            <ul class="gnb">
+              <li>
+                <a href="#" alt="아라리움">아라리움</a>
+                <ul class="submenu">
+                  <li><a href="#" alt="공지사항">공지사항</a></li>
+                  <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
+                  <li><a href="#" alt="관람안내">관람안내</a></li>
+                  <li><a href="#" alt="보도자료">보도자료</a></li>
+                  <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="#" alt="연간이용권 고객 안내"
+                      >연간이용권 고객 안내</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" alt="연간이용권 고객 혜택"
+                      >연간이용권 고객 혜택</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" alt="아라리움 스토리">아라리움 스토리</a>
+                <ul class="submenu">
+                  <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
+                  <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
+                  <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
+                  <li>
+                    <a href="#" alt="공연 체험 시간표">공연 체험 시간표</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#" alt="이벤트">이벤트</a></li>
+            </ul>
+            <a href="#" class="navbar_toggleBtn">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </nav>
         </div>
+      </header>
+      <!-- 비주얼 -->
+      <section class="visual clearfix">
+        <div class="inner"></div>
       </section>
-      <!-- 심해어 소개 -->
-      <section class="deepseafish">
-        <div class="inner">
-          
-        </div>
+      <!-- 육지동물 소개 -->
+      <section class="landanimal clearfix">
+        <div class="inner"></div>
       </section>
-    </section>
-    <!-- 이벤트 -->
-    <section class="event">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 하단 -->
-    <footer class="footer">
-      <div class="inner">
-
-      </div>
-    </footer>
-  </div>
-</body>
+      <!-- 바다 -->
+      <section class="sea">
+        <!-- 바다동물 소개 -->
+        <section class="marineanimal clearfix">
+          <div class="inner">
+            <div class="box">
+              <div class="dot">
+                <p class="dot_1"></p>
+                <p class="dot_2"></p>
+                <p class="dot_3"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 심해어 소개 -->
+        <section class="deepseafish">
+          <div class="inner"></div>
+        </section>
+      </section>
+      <!-- 이벤트 -->
+      <section class="event">
+        <div class="inner"></div>
+      </section>
+      <!-- 하단 -->
+      <footer class="footer">
+        <div class="inner"></div>
+      </footer>
+    </div>
+  </body>
 </html>

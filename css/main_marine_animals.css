@@ -3,18 +3,46 @@
   position: relative;
   height: 100vh;
 }
-@media all and (max-width: 1680px){
-  
+
+.marineanimal .box {
+  position: relative;
+  display: block;
 }
-@media all and (max-width: 1280px){
-  
+.marineanimal .box .dot_1 {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 290px;
+  left: 478px;
 }
-@media all and (max-width: 1024px){
-  
+.marineanimal .box .dot_2 {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 767px;
+  left: 480px;
 }
-@media all and (max-width: 760px){
-  
+.marineanimal .box .dot_3 {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 486px;
+  left: 1035px;
 }
-@media all and (max-width: 480px){
-  
+
+@media all and (max-width: 1680px) {
+}
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
 }
