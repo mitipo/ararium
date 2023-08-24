@@ -1,136 +1,296 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <!-- SEO적용 -->
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="format-detection" content="telephone=no"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-	<meta name="keywords" content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"/>
-  <meta property="og:title" content="아라리움">
-	<meta property="keyword" content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"/>
-  <meta property="og:url" content="https://ararium.com/">
-  <meta property="og:image" content="https://ararium.com/img/url_image.jpg">
-  <meta property="og:description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="아라리움">
-  <meta name="twitter:url" content="https://ararium.com/">
-  <meta name="twitter:image" content="https://ararium.com/img/logo.png">
-  <meta name="twitter:description" content="아라리움, 육지해양동물과 함께하는 우리만의 공간">
-  <!-- favicon -->
-  <link rel="stortcut icon" href="images/favi.png" type="image/x-icon"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>아라리움</title>
-  <!-- swiper 링크 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/e2b37e629b.js" crossorigin="anonymous"></script>
-  <!-- aos -->
-  <link rel="stylesheet" href="css/aos.css">
-  <script src="js/aos.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <!-- css -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
-  <!--[if lt IE 9]>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- SEO적용 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <meta
+      name="keywords"
+      content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"
+    />
+    <meta property="og:title" content="아라리움" />
+    <meta
+      property="keyword"
+      content="아라리움, ararium, 아마존, 아쿠아리움, 육지해양동물, 육지동물, 바다동물, 심해어"
+    />
+    <meta property="og:url" content="https://ararium.com/" />
+    <meta property="og:image" content="https://ararium.com/img/url_image.jpg" />
+    <meta
+      property="og:description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="아라리움" />
+    <meta name="twitter:url" content="https://ararium.com/" />
+    <meta name="twitter:image" content="https://ararium.com/img/logo.png" />
+    <meta
+      name="twitter:description"
+      content="아라리움, 육지해양동물과 함께하는 우리만의 공간"
+    />
+    <!-- favicon -->
+    <link rel="stortcut icon" href="images/favi.png" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>아라리움</title>
+    <!-- swiper 링크 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e2b37e629b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <script src="js/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.js"></script>
   [endif]-->
-  <script src="js/prefixfree.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="js/header.js" defer></script>
-  <script src="js/main.js"></script>
-  <script src="js/main_visual.js"></script>
-  <script src="js/main_land_animals.js"></script>
-  <script src="js/main_marine_animals.js"></script>
-  <script src="js/main_deep_sea_fish.js"></script>
-  <script src="js/main_event.js"></script>
-  <script src="js/footer.js"></script>
-</head>
-<body>
-  <div class="wrap">
-    <!-- 상단 -->
-    <header class="header">
-      <div class="inner">
-        <!-- 로고 -->
-        <a href="index.html" alt="아라리움" class="logo">
-          <img src="images/logo_w02.png" alt="아라리움">
-        </a>
-        <!-- 메뉴 -->
-        <nav class="nav">
-          <ul class="gnb">
-            <li><a href="#" alt="아라리움">아라리움</a>
-            <ul class="submenu">
-              <li><a href="#" alt="공지사항">공지사항</a></li>
-              <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
-              <li><a href="#" alt="관람안내">관람안내</a></li>
-              <li><a href="#" alt="보도자료">보도자료</a></li>
-              <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
-            <ul class="submenu">
-              <li><a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a></li>
-              <li><a href="#" alt="연간이용권 고객 혜택">연간이용권 고객 혜택</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a>
-            <ul class="submenu">
-              <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
-              <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
-              <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
-              <li><a href="#" alt="공연 체험 시간표">공연 체험 시간표</a></li>
-            </ul>
-            </li>
-            <li><a href="#" alt="이벤트">이벤트</a></li>
-          </ul>
-          <a href="#" class="navbar_toggleBtn">
-            <i class="fa-solid fa-bars"></i>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/main.js"></script>
+    <script src="js/main_visual.js"></script>
+    <script src="js/main_land_animals.js"></script>
+    <script src="js/main_marine_animals.js"></script>
+    <script src="js/main_deep_sea_fish.js"></script>
+    <script src="js/main_event.js"></script>
+    <script src="js/footer.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 상단 -->
+      <header class="header">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="index.html" alt="아라리움" class="logo">
+            <img src="images/logo_w02.png" alt="아라리움" />
           </a>
-        </nav>
-      </div>
-    </header>
-    <!-- 비주얼 -->
-    <section class="visual clearfix">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 육지동물 소개 -->
-    <section class="landanimal clearfix">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 바다 -->
-    <section class="sea">
-      <!-- 바다동물 소개 -->
-      <section class="marineanimal clearfix">
-        <div class="inner">
-          
+          <!-- 메뉴 -->
+          <nav class="nav">
+            <ul class="gnb">
+              <li>
+                <a href="#" alt="아라리움">아라리움</a>
+                <ul class="submenu">
+                  <li><a href="#" alt="공지사항">공지사항</a></li>
+                  <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
+                  <li><a href="#" alt="관람안내">관람안내</a></li>
+                  <li><a href="#" alt="보도자료">보도자료</a></li>
+                  <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="#" alt="연간이용권 고객 안내"
+                      >연간이용권 고객 안내</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" alt="연간이용권 고객 혜택"
+                      >연간이용권 고객 혜택</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" alt="아라리움 스토리">아라리움 스토리</a>
+                <ul class="submenu">
+                  <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
+                  <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
+                  <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
+                  <li>
+                    <a href="#" alt="공연 체험 시간표">공연 체험 시간표</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#" alt="이벤트">이벤트</a></li>
+            </ul>
+            <a href="#" class="navbar_toggleBtn">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </nav>
         </div>
+      </header>
+      <!-- 비주얼 -->
+      <section class="visual clearfix">
+        <div class="inner"></div>
       </section>
-      <!-- 심해어 소개 -->
-      <section class="deepseafish">
-        <div class="inner">
-          
-        </div>
+      <!-- 육지동물 소개 -->
+      <section class="landanimal clearfix">
+        <div class="inner"></div>
       </section>
-    </section>
-    <!-- 이벤트 -->
-    <section class="event">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 하단 -->
-    <footer class="footer">
-      <div class="inner">
-
-      </div>
-    </footer>
-  </div>
-</body>
+      <!-- 바다 -->
+      <section class="sea">
+        <!-- 바다동물 소개 -->
+        <section class="marineanimal clearfix">
+          <div class="inner"></div>
+        </section>
+        <!-- 심해어 소개 -->
+        <section class="deepseafish">
+          <div class="inner"></div>
+          <!-- 마크 -->
+          <a href="#" class="deepseafish-mark1">
+            <img src="images/deepseafish_mark1.png" alt="위치"
+          /></a>
+          <a href="#" class="deepseafish-mark2">
+            <img src="images/deepseafish_mark1.png" alt="위치"
+          /></a>
+          <a href="#" class="deepseafish-mark3">
+            <img src="images/deepseafish_mark1.png" alt="위치"
+          /></a>
+          <!-- 내용1 블롭피쉬 -->
+          <div class="deepseafish-content1">
+            <img src="images/deepseafish_blobfish1.jpg" alt="" />
+            <div class="deepseafish-content1-title">
+              <h2>블롭피쉬(블로브피쉬)</h2>
+            </div>
+            <div class="deepseafish-content1-txt">
+              <ul>
+                <li>
+                  <span>분류 : </span>
+                  <p>쏨뱅이목 물수배기과에 속하는 경골어류 심해어</p>
+                </li>
+                <li>
+                  <span>서식지 : </span>
+                  <p>호주와 태즈메이니아 섬의 근해의 1000~5000m 심해</p>
+                </li>
+                <li>
+                  <span>크기 : </span>
+                  <p>일반적으로 약 30cm~60cm</p>
+                </li>
+                <li>
+                  <span>특징 : </span>
+                  <p>
+                    블롭피쉬는 사진 중 흔히 아래의 모습으로 알려져있으나 원래의
+                    모습은 사진 중 위의 모습이다. 수압이 매우 높은 해저에 알맞게
+                    사는 동물을 수압이 낮은 수면 위로 꺼냈을 때 압력이 급격히
+                    낮아져서 몸이 부풀어 오르고 피부가 벗겨져 아래의 사진처럼
+                    되는 것이다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="deepseafish-content-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <!-- 내용2 세발치 -->
+          <div class="deepseafish-content2">
+            <img src="images/deepseafish_tripodfish.png" alt="세발치" />
+            <img
+              src="images/deepseafish_tripodfishbaby.jpg"
+              alt="세발치 치어"
+            />
+            <div class="deepseafish-content2-title">
+              <h2>세발치</h2>
+            </div>
+            <div class="deepseafish-content2-txt">
+              <ul>
+                <li>
+                  <span>이름 : </span>
+                  <p>
+                    배의 지느러미 1쌍, 꼬리지느러미 1개가 길게 늘어진 것이 마치
+                    세 개의 다리를 보는 듯 해서 붙여진 것이다.
+                  </p>
+                </li>
+                <li>
+                  <span>분류 : </span>
+                  <p>긴촉수매퉁이속에 속한 어류</p>
+                </li>
+                <li>
+                  <span>서식지 : </span>
+                  <p>878m~4700m 심해</p>
+                </li>
+                <li>
+                  <span>크기 : </span>
+                  <p>
+                    평균 길이는 30cm~45cm지만 지느러미 다리는 보통 1m가 넘는다.
+                  </p>
+                </li>
+                <li>
+                  <span>특징 : </span>
+                  <p>
+                    눈이 퇴화되어 먹이를 잡기 위해 유독 가슴 지느러미가
+                    발달되었다. 지느러미를 바닥에 세워 세발치가 그 자리에
+                    고정되게끔 도와준다. 지느러미에 예민한 감각 기관이 있어 다리
+                    사이로 지나가는 먹이를 물의 진동으로 감지하고 지느러미를
+                    손처럼 써서 먹이를 입이 있는 방향으로 끌어온다. [아래사진]
+                    치어가 굉장히 아름다운 편에 속한다
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="deepseafish-content-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <!-- 내용3 덤보문어 -->
+          <div class="deepseafish-content3">
+            <img src="images/deepseafish_grimpoteuthis1.jpg" alt="덤보문어" />
+            <div class="deepseafish-content3-title">
+              <h2>덤보문어</h2>
+            </div>
+            <div class="deepseafish-content3-txt">
+              <ul>
+                <li>
+                  <span>이름 : </span>
+                  <p>아기 코끼리 덤보와 닮았기 때문에 붙은 이름이다.</p>
+                </li>
+                <li>
+                  <span>분류 : </span>
+                  <p>문어목 우무문어과에 속한 문어</p>
+                </li>
+                <li>
+                  <span>서식지 : </span>
+                  <p>1000~5000m 심해</p>
+                </li>
+                <li>
+                  <span>크기 : </span>
+                  <p>
+                    해당 서식지에서 최상위 포식자 역할을 하기 때문에 역할에
+                    걸맞게 다른 심해생물보다 덩치가 크다. 현재 가장 큰 표본은
+                    1.5m이며, 촬영된 녀석들 중 가장 큰 개체는 3~4m로 추정된다고
+                    한다.
+                  </p>
+                </li>
+                <li>
+                  <span>특징 : </span>
+                  <p>물과 먹물을 뿜지 못한다.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="deepseafish-content-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- 이벤트 -->
+      <section class="event">
+        <div class="inner"></div>
+      </section>
+      <!-- 하단 -->
+      <footer class="footer">
+        <div class="inner"></div>
+      </footer>
+    </div>
+  </body>
 </html>
