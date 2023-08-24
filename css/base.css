@@ -28,3 +28,7 @@ body {
   color: #000;
   font-weight: 400;
 }
+#wrap {
+  width: 100%;
+  position: relative;
+}

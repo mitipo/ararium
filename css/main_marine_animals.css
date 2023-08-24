@@ -2,6 +2,9 @@
 .marineanimal {
   position: relative;
   height: 100vh;
+  background: url("../images/main3.jpg") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
 }
 @media all and (max-width: 1680px){
   
