@@ -3,7 +3,7 @@
 
 // });
 // 멀티미디어 리소스 로딩 완료 후 실행
-window.onload = function() {
+window.addEventListener("load", function() {
   let navList = document.querySelectorAll(".gnb > li");
     
   navList.forEach(function(navItem){
@@ -24,4 +24,4 @@ window.onload = function() {
   toggleBar.addEventListener("click", function() {
     gnb.classList.add("active");
   });
-};
+});
