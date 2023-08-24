@@ -1,24 +1,260 @@
 /* 육지동물 소개 */
 .landanimal {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background: beige;
   background: url("../images/main2.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
 }
-@media all and (max-width: 1680px){
-  
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "EF_cucumbersalad";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_cucumbersalad.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
-@media all and (max-width: 1280px){
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
-@media all and (max-width: 1024px){
-  
+html,
+body {
+  position: relative;
+  height: 100%;
 }
-@media all and (max-width: 760px){
-  
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  /* height: 5000px; */
 }
-@media all and (max-width: 480px){
-  
+swiper-container {
+  margin: 0 auto;
+  width: 1400px;
+  height: 100%;
+}
+swiper-slide {
+  position: relative;
+  text-align: center;
+  /* display: block; */
+  font-size: 18px;
+  /* background: #fff; */
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
+}
+.land-wrap {
+  margin: 120px auto;
+}
+.black {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.black:hover {
+  background: rgba(0, 0, 0, 0.727);
+  /* border: 3px solid rgb(0, 0, 0); */
+  z-index: 99;
+  transition: 0.3s;
+}
+swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  /* border: 5px solid #fff; */
+  /* border-radius: px; */
+}
+.land-wrap {
+  width: 100%;
+  height: 100%;
+}
+.swiper-box {
+  width: 100%;
+  height: 1024px;
+  margin: 0 auto;
+  background: linear-gradient(
+    rgba(255, 255, 255, 1.9),
+    rgba(165, 165, 165, 0.1)
+  );
+  /* background-position: center; */
+  background-size: cover;
+}
+/* .swiper-box-inner {
+  background-color: #000;
+  height: 600px;
+} */
+.greenbox {
+  background: url("../images/sik.png") no-repeat center;
+  background-size: cover;
+  width: 500px;
+  height: 400px;
+  display: block;
+  position: absolute;
+  opacity: 30%;
+  top: -120px;
+  left: 0;
+}
+.greenbox2 {
+  background: url("../images/sik.png") no-repeat center;
+  background-size: cover;
+  width: 500px;
+  height: 400px;
+  display: block;
+  position: absolute;
+  opacity: 30%;
+  top: -120px;
+  right: 0;
+  transform: scaleX(-1);
+}
+/* 텍스트 */
+.txtbox {
+  padding-top: 25px;
+  color: #333;
+  margin-left: 220px;
+  /* text-align: center; */
+  padding-bottom: 75px;
+  font-family: "EF_cucumbersalad";
+}
+.txtbox h2 {
+  font-size: 72px;
+  font-weight: 700;
+}
+.txtbox p {
+  padding-top: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.black-text {
+  opacity: 0;
+  color: #fff;
+  font-size: 20px;
+}
+.black:hover .black-text {
+  opacity: 1;
+}
+.black-text {
+  font-size: 22px;
+  margin-top: 35%;
+  margin-right: 15%;
+  text-align: center;
+  position: relative;
+  display: block;
+  text-shadow: 2px 2px 2px #000;
+}
+.black-text p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.black-text h4 {
+  border-bottom: 5px solid #049470;
+  padding-bottom: 10px;
+  width: 120px;
+  margin: auto;
+}
+.black-text-first {
+  padding-top: 10px;
+}
+.black-text button {
+  border: 2px solid #fff;
+  font-size: 12px;
+  color: #fff;
+  padding: 5px 10px;
+  background: none;
+  margin-top: 10px;
+  /* position: absolute; */
+}
+.black-text-p {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
+  display: block;
+  position: relative;
+}
+.black-text button:hover {
+  background: #049470;
+  font-weight: 400;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+/* 버튼 */
+.pnbutton {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: -170px;
+  z-index: 999;
+  opacity: 80%;
+}
+.pnbutton .prev {
+  left: 0;
+  float: left;
+  padding-left: 40px;
+}
+.pnbutton .prev:hover {
+}
+.pnbutton .next {
+  right: 0;
+  float: right;
+  padding-right: 40px;
+}
+/* 썸네일 배경 호버 */
+#samak:hover {
+  background: url("../images/desert.gif") no-repeat;
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: 10%;
+}
+#racoon:hover {
+  background: url("../images/racoon.gif");
+  background-size: cover;
+  background-position-x: 35%;
+  background-position-y: 10%;
+}
+#copy:hover {
+  background: url("../images/giphy.gif") no-repeat;
+  background-size: cover;
+  background-position-x: 60%;
+  background-position-y: 20%;
+}
+#wang:hover {
+  background: url("../images/wang4.gif") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 20%;
+  transition: 0.5s;
+}
+#alpha:hover {
+  background: url("../images/alpha.gif");
+  background-size: cover;
+  background-position-x: 100%;
+  background-position-y: 30%;
+  transition: 0.5s;
+}
+#toko:hover {
+  background: url("../images/tokotu.gif") no-repeat right 10px;
+  background-size: cover;
+  background-position-x: 100%;
+  background-position-y: 10%;
+}
+
+@media all and (max-width: 1680px) {
+}
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
 }
