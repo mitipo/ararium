@@ -55,6 +55,7 @@
     <script src="js/aos.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -67,7 +68,7 @@
   <script src="js/header.js" defer></script>
   <script src="js/main.js"></script>
   <script src="js/main_visual.js"></script>
-  <script src="js/main_land_animals.js"></script>
+  <script src="js/main_land_animals.js" defer></script>
   <script src="js/main_marine_animals.js"></script>
   <script src="js/main_deep_sea_fish.js"></script>
   <script src="js/main_event.js"></script>
@@ -126,72 +127,6 @@
     </section>
     <!-- 육지동물 소개 -->
     <section class="landanimal clearfix">
-      <div class="inner">
-        
-      </div>
-    </section>
-    <!-- 바다 -->
-    <section class="sea">
-      <!-- 바다동물 소개 -->
-      <section class="marineanimal clearfix">
-        <div class="inner">
-          <!-- 로고 -->
-          <a href="index.html" alt="아라리움" class="logo">
-            <img src="images/logo_w02.png" alt="아라리움" />
-          </a>
-          <!-- 메뉴 -->
-          <nav class="nav">
-            <ul class="gnb">
-              <li>
-                <a href="#" alt="아라리움">아라리움</a>
-                <ul class="submenu">
-                  <li><a href="#" alt="공지사항">공지사항</a></li>
-                  <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
-                  <li><a href="#" alt="관람안내">관람안내</a></li>
-                  <li><a href="#" alt="보도자료">보도자료</a></li>
-                  <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
-                <ul class="submenu">
-                  <li>
-                    <a href="#" alt="연간이용권 고객 안내"
-                      >연간이용권 고객 안내</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" alt="연간이용권 고객 혜택"
-                      >연간이용권 고객 혜택</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" alt="아라리움 스토리">아라리움 스토리</a>
-                <ul class="submenu">
-                  <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
-                  <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
-                  <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
-                  <li>
-                    <a href="#" alt="공연 체험 시간표">공연 체험 시간표</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#" alt="이벤트">이벤트</a></li>
-            </ul>
-            <a href="#" class="navbar_toggleBtn">
-              <i class="fa-solid fa-bars"></i>
-            </a>
-          </nav>
-        </div>
-      </header>
-      <!-- 비주얼 -->
-      <section class="visual clearfix">
-        <div class="inner"></div>
-      </section>
-      <!-- 육지동물 소개 -->
-      <section class="landanimal clearfix">
         <div class="inner">
           <div class="land-wrap">
             <div class="swiper-box">
@@ -429,35 +364,27 @@
               .
             </div>
           </div>
-          <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-          <script>
-            AOS.init({
-              offset: 120,
-              delay: 0,
-              duration: 700,
-            });
-          </script>
         </div>
-      </section>
-      <!-- 바다 -->
-      <section class="sea">
-        <!-- 바다동물 소개 -->
-        <section class="marineanimal clearfix">
-          <div class="inner"></div>
-        </section>
-        <!-- 심해어 소개 -->
-        <section class="deepseafish">
-          <div class="inner"></div>
-        </section>
-      </section>
-      <!-- 이벤트 -->
-      <section class="event">
+    </section>
+    <!-- 바다 -->
+    <section class="sea">
+      <!-- 바다동물 소개 -->
+      <section class="marineanimal clearfix">
         <div class="inner"></div>
       </section>
-      <!-- 하단 -->
-      <footer class="footer">
+      <!-- 심해어 소개 -->
+      <section class="deepseafish">
         <div class="inner"></div>
-      </footer>
-    </div>
-  </body>
+      </section>
+    </section>
+    <!-- 이벤트 -->
+    <section class="event">
+      <div class="inner"></div>
+    </section>
+    <!-- 하단 -->
+    <footer class="footer">
+      <div class="inner"></div>
+    </footer>
+  </div>
+</body>
 </html>
