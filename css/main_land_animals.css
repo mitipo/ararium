@@ -3,7 +3,7 @@
   position: relative;
   height: 80vh;
   background: beige;
-  background: url("../images/main2.jpg") no-repeat;
+  background: url("../images/nature_illust2.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
 }
@@ -104,12 +104,14 @@ swiper-slide img {
 }
 .txtbox h2 {
   font-size: 72px;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 .txtbox p {
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: 32px;
   font-weight: 600;
+  letter-spacing: -0.5px;
   margin-left: 10px;
 }
 .black-text {
@@ -165,26 +167,26 @@ swiper-slide img {
   border: 2px solid #fff;
 }
 /* 버튼 */
-.pnbutton {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  top: -170px;
-  z-index: 999;
-  opacity: 80%;
+.slide_btn_box > button {
+  position: absolute;
+  top: 32%;
+  width: 60px;
+  height: 60px;
+  font-size: 80px;
+  color: #7a7a7a;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
 }
-.pnbutton .prev {
-  left: 0;
-  float: left;
-  padding-left: 40px;
+.slide_btn_box > button:hover {
+  color: #000;
 }
-.pnbutton .prev:hover {
+.slide_btn_box > .slide_btn_prev {
+  left: 100px;
 }
-.pnbutton .next {
-  right: 0;
-  float: right;
-  padding-right: 40px;
+.slide_btn_box > .slide_btn_next {
+  right: 100px;
 }
 /* 썸네일 배경 호버 */
 #samak:hover {
@@ -198,12 +200,14 @@ swiper-slide img {
   background-size: cover;
   background-position-x: 35%;
   background-position-y: 10%;
+  opacity: 90%;
 }
 #copy:hover {
   background: url("../images/giphy.gif") no-repeat;
   background-size: cover;
   background-position-x: 60%;
   background-position-y: 20%;
+  opacity: 90%;
 }
 #wang:hover {
   background: url("../images/wang4.gif") no-repeat;
@@ -226,6 +230,7 @@ swiper-slide img {
   background-position-y: 10%;
 }
 
+/*  */
 @media all and (max-width: 1680px) {
 }
 @media all and (max-width: 1280px) {
