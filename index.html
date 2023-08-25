@@ -40,11 +40,6 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
     <title>아라리움</title>
-    <!-- swiper 링크 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/e2b37e629b.js"
@@ -53,9 +48,9 @@
     <!-- aos -->
     <link rel="stylesheet" href="css/aos.css" />
     <script src="js/aos.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+      <!-- swiper -->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="js/swiper/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -65,7 +60,7 @@
   [endif]-->
     <script src="js/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="js/header.js" defer></script>
+    <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/main_visual.js"></script>
     <script src="js/main_land_animals.js"></script>
@@ -129,12 +124,13 @@
             </ul>
             <a href="#" class="navbar_toggleBtn">
               <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-xmark"></i>
             </a>
           </nav>
         </div>
       </header>
     <!-- 비주얼 -->
-    <section class="visual clearfix">
+    <section class="visual clearfix" id="visual">
       <div class="inner"></div>
     </section>
     <!-- 육지동물 소개 -->
@@ -546,17 +542,21 @@
       <!-- 하단 -->
       <footer class="footer">
         <div class="inner">
-          <ul class="sns">
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-            <li><a href="#"><img src="" alt=""></a></li>
-          </ul>
+          <section class="btn-section">
+            <button class="btn-tw"><i class="fab fa-lg first-logo fa-twitter"></i><i class="fab fa-lg second-logo fa-twitter"></i></button>
+            <button class="btn-fb"><i class="fab fa-lg first-logo fa-facebook-f"></i><i class="fab fa-lg second-logo fa-facebook-f"></i></button>
+            <button class="btn-ig"><i class="fab fa-lg first-logo fa-instagram"></i><i class="fab fa-lg second-logo fa-instagram"></i></button>
+          </section>
           <div class="copyright">
             <ul>
               <li>COPYRIGHT @2023 All Rights Reserved.</li>
-              <li>00사무소 : (00000) 000도 00시 00구 00로 00번길 0, 0층000호 TEL : 055-263-2060 FAX : 055-263-2087</li>
+              <li>00사무소 : (00000) 000도 00시 00구 00로 00번길 0, 0층000호<span class="line">&emsp;|&emsp;</span></li>
+              <li>TEL : 055-263-2060&emsp;|&emsp;FAX : 055-263-2087</li>
             </ul>
           </div>
+          <a href="#visual" class="topbtn">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
         </div>
       </footer>
     </section>
