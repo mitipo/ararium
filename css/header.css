@@ -8,7 +8,6 @@
   z-index: 99999;
 }
 .header .inner {
-  position: relative;
   width: 100%;
   padding: 0px 25px;
   margin: 0 auto;
@@ -49,7 +48,8 @@
   color: white;
 }
 .gnb > li:hover > a {
-  color: #0eabee;
+  color: #0f97e7;
+  font-weight: 900;
 }
 .submenu {
   position: absolute;
@@ -68,7 +68,7 @@
   background: rgba(0, 0, 0, 0.7);
 }
 .submenu li:hover a {
-  color: #0eabee;
+  color: #0f97e7;
 }
 .navbar_toggleBtn {
   display: none;
@@ -76,6 +76,9 @@
   font-size: 24px;
   right: 0;
   color: #fff;
+}
+.fa-xmark {
+  display: none;
 }
 @media all and (max-width: 1680px){
   .nav_bar > ul {
@@ -96,6 +99,12 @@
   .header {
     flex-direction: column;
     justify-content: flex-end;
+  }
+  .header .inner {
+    padding: 0px;
+  }
+  .logo img {
+    margin-left: 20px;
   }
   .gnb > li {
     display: block;
@@ -119,8 +128,8 @@
   }
   .gnb > li {
     position: relative;
-    width: 115%;
-    padding: 10px 25px;
+    width: 100%;
+    padding: 20px 25px;
     background-color: rgba(0, 0, 0, 0.7);
   }
   .gnb > li > a {
@@ -131,14 +140,15 @@
   .submenu {
     width: 100%;
     position: relative;
-    top: 0px;
+    top: 15px;
   }
   .submenu > li > a {
-    text-align: center;
+    text-align: left;
     color: #fff;
   }
   .navbar_toggleBtn {
     display: inline-block;
+    margin-right: 20px;
   }
   .gnb.active {
     display: flex;
