@@ -1,7 +1,10 @@
 /* 메인_이벤트 */
-.event {
+.eventfooter {
   position: relative;
   height: 100vh;
+  background: url("../images/main5.jpg") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
 }
 @media all and (max-width: 1680px){
   
