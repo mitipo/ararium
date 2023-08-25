@@ -3,18 +3,127 @@
   position: relative;
   height: 100vh;
 }
-@media all and (max-width: 1680px){
-  
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); /* 시작과 끝 위치 */
+  }
+  40% {
+    transform: translateY(-23px); /* 통통 튀는 중간 위치 */
+  }
 }
-@media all and (max-width: 1280px){
-  
+.deepseafish .deepseafish-mark1 img {
+  width: 75%;
 }
-@media all and (max-width: 1024px){
-  
+.deepseafish .deepseafish-mark2 img {
+  width: 75%;
 }
-@media all and (max-width: 760px){
-  
+.deepseafish .deepseafish-mark3 img {
+  width: 75%;
 }
-@media all and (max-width: 480px){
-  
+.deepseafish-mark1 {
+  position: absolute;
+  top: 15%;
+  left: 70%;
+  animation: bounce 2s infinite;
+  animation-delay: 0s;
+  cursor: pointer;
+}
+.deepseafish-mark2 {
+  position: absolute;
+  top: 31%;
+  left: 19%;
+  animation: bounce 2s infinite;
+  animation-delay: 1s;
+  cursor: pointer;
+}
+.deepseafish-mark3 {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  animation: bounce 2s infinite;
+  animation-delay: 0.7s;
+  cursor: pointer;
+}
+.deepseafish-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: none; */
+  width: 60%;
+  height: 70%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5%;
+  border-radius: 5px;
+}
+.deepseafish-content-title {
+  font-size: 30px;
+  margin-bottom: 5%;
+}
+.deepseafish-content-title span {
+  font-size: 20px;
+}
+.deepseafish-content-txt {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.deepseafish-content-txt ul li {
+  margin-bottom: 1%;
+  line-height: 1.5;
+}
+.deepseafish-content-txt span {
+  float: left;
+  font-weight: bold;
+  margin-right: 0.5%;
+}
+.deepseafish-content-close1,
+.deepseafish-content-close2,
+.deepseafish-content-close3 {
+  font-size: 30px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+#deepseafish1 {
+  display: none;
+}
+#deepseafish2 {
+  display: none;
+}
+#deepseafish3 {
+  display: none;
+}
+#deepseafish1 img {
+  width: 33%;
+  float: left;
+  margin-right: 10%;
+  padding-bottom: 40px;
+}
+#deepseafish2 img {
+  width: 38%;
+  float: left;
+  margin-right: 10%;
+  padding-bottom: 40px;
+}
+#deepseafish3 img {
+  width: 33%;
+  float: left;
+  margin-right: 10%;
+  padding-bottom: 40px;
+}
+@media all and (max-width: 1680px) {
+}
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 760px) {
+}
+@media all and (max-width: 480px) {
 }
