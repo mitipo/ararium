@@ -49,7 +49,7 @@
 }
 .gnb > li:hover > a {
   color: #0f97e7;
-  font-weight: 900;
+  font-weight: 700;
 }
 .submenu {
   position: absolute;
