@@ -1,5 +1,47 @@
 /* 하단 */
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  height: 150px;
+  z-index: 99999;
+}
+.footer .inner {
+  position: relative;
+  width: 100%;
+  padding: 0px 25px;
+  margin: 0 auto;
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.sns {
+  width: 30%;
+  min-width: 100px;
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sns > li {
+  width: 30px;
+  height: 30px;
+  background-color: crimson;
+  border-radius: 50%;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+}
+.copyright ul li {
+  margin-bottom: 10px;
 }
 @media all and (max-width: 1680px){
   
