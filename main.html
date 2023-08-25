@@ -55,16 +55,17 @@
     <script src="js/aos.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.js"></script>
-  [endif]-->
+    [endif]-->
     <script src="js/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="js/header.js" defer></script>
+    <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/main_visual.js"></script>
     <script src="js/main_land_animals.js"></script>
@@ -78,12 +79,12 @@
       <!-- 상단 -->
       <header class="header">
         <div class="inner">
-          <!-- 로고 -->
-          <a href="index.html" alt="아라리움" class="logo">
-            <img src="images/logo_w02.png" alt="아라리움" />
-          </a>
           <!-- 메뉴 -->
-          <nav class="nav">
+          <nav class="nav_bar">
+            <!-- 로고 -->
+            <a href="index.html" alt="아라리움" class="logo">
+              <img src="images/logo_w02.png" alt="아라리움" />
+            </a>
             <ul class="gnb">
               <li>
                 <a href="#" alt="아라리움">아라리움</a>
@@ -121,7 +122,10 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="#" alt="이벤트">이벤트</a></li>
+              <li>
+                <a href="#" alt="이벤트">이벤트</a>
+                <ul class="submenu"></ul>
+              </li>
             </ul>
             <a href="#" class="navbar_toggleBtn">
               <i class="fa-solid fa-bars"></i>
@@ -129,13 +133,235 @@
           </nav>
         </div>
       </header>
-      <!-- 비주얼 -->
-      <section class="visual clearfix">
-        <div class="inner"></div>
-      </section>
-      <!-- 육지동물 소개 -->
-      <section class="landanimal clearfix">
-        <div class="inner"></div>
+    <!-- 비주얼 -->
+    <section class="visual clearfix">
+      <div class="inner"></div>
+    </section>
+    <!-- 육지동물 소개 -->
+    <section class="landanimal clearfix">
+      <div class="inner">
+        <div class="land-wrap">
+          <div class="swiper-box">
+            <div class="swiper-box-inner">
+              <div class="greenbox"></div>
+              <div class="greenbox2"></div>
+              <div class="txtbox" data-aos="zoom-out-right" delay="2200">
+                <h2>육지동물 소개</h2>
+                <p>아라리움의 특별한 육지 동물을 소개합니다.</p>
+              </div>
+              <swiper-container
+                class="mySwiper"
+                pagination="true"
+                pagination-clickable="true"
+                slides-per-view="6"
+                space-between="30"
+                free-mode="true"
+                data-aos="fade-up"
+              >
+                <swiper-slide>
+                  <a href="#"
+                    ><img src="images/desert.png" alt="사막여우"
+                  /></a>
+                  <div class="black" id="samak">
+                    <div class="black-text">
+                      <div class="black-text-p">
+                        <h4>사막여우</h4>
+                        <p class="black-text-first">식육목</p>
+                        <p>개과</p>
+                        <p>토코빌리지</p>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/lakoon.png" alt="라쿤" /></a>
+                    <div class="black" id="racoon">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>라쿤</h4>
+                          <p class="black-text-first">식육목</p>
+                          <p>아메리카 너구리과</p>
+                          <p>토코빌리지</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/kpibara.png" alt="카피바라"
+                    /></a>
+                    <div class="black" id="copy">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>카피바라</h4>
+                          <p class="black-text-first">설치목</p>
+                          <p>카피바라과</p>
+                          <p>동물의 숲</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/wanggwan.png" alt="왕관앵무"
+                    /></a>
+                    <div class="black" id="wang">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>왕관앵무</h4>
+                          <p class="black-text-first">앵무목</p>
+                          <p>앵무과</p>
+                          <p>강물따라</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/alpaka.png" alt="알파카" /></a>
+                    <div class="black" id="alpha">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>알파카</h4>
+                          <p class="black-text-first">우제목</p>
+                          <p>낙타과</p>
+                          <p>토코빌리지</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/toko.png" alt="토코투칸" /></a>
+                    <div class="black" id="toko">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>토코투칸</h4>
+                          <p class="black-text-first">딱따구리목</p>
+                          <p>큰부리새과</p>
+                          <p>강물따라</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/preddog.png" alt="프레리독"
+                    /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>프레리독</h4>
+                          <p class="black-text-first">설치목</p>
+                          <p>다람쥐과</p>
+                          <p>동물의 숲</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/rabbitttt.png" alt="토끼"
+                    /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>토끼</h4>
+                          <p class="black-text-first">토끼목</p>
+                          <p>토끼과</p>
+                          <p>강물따라</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/aengmu.png" alt="앵무새" /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>청금강 앵무</h4>
+                          <p class="black-text-first">앵무목</p>
+                          <p>앵무과</p>
+                          <p>강물따라</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/koati.png" alt="코아티" /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>코아티</h4>
+                          <p class="black-text-first">식육목</p>
+                          <p>아메리카 너구리과</p>
+                          <p>동물의 숲</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"><img src="images/honghak.png" alt="홍학" /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>홍학</h4>
+                          <p class="black-text-first">홍학목</p>
+                          <p>홍학과</p>
+                          <p>강물따라</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/cattttt.png" alt="미어캣"
+                    /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>미어캣</h4>
+                          <p class="black-text-first">식육목</p>
+                          <p>사향삵과</p>
+                          <p>동물의 숲</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <a href="#"
+                      ><img src="images/namunel.png" alt="나무늘보"
+                    /></a>
+                    <div class="black">
+                      <div class="black-text">
+                        <div class="black-text-p">
+                          <h4>나무늘보</h4>
+                          <p class="black-text-first">빈치목</p>
+                          <p>나무늘보과</p>
+                          <p>토코빌리지</p>
+                        </div>
+                        <button>자세히 보기</button>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                </swiper-container>
+                <!-- 슬라이드 버튼 -->
+                <div class="slide_btn_box">
+                  <button type="button" class="slide_btn_prev">＜</button>
+                  <button type="button" class="slide_btn_next">＞</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- 바다 -->
       <section class="sea">
@@ -175,14 +401,30 @@
           <div class="inner"></div>
         </section>
       </section>
-      <!-- 이벤트 -->
-      <section class="event">
-        <div class="inner"></div>
-      </section>
+    <!-- 이벤트 -->
+    <section class="eventfooter">
+      <div class="event">
+        <div class="inner">
+
+        </div>
+      </div>
       <!-- 하단 -->
       <footer class="footer">
-        <div class="inner"></div>
+        <div class="inner">
+          <ul class="sns">
+            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="" alt=""></a></li>
+            <li><a href="#"><img src="" alt=""></a></li>
+          </ul>
+          <div class="copyright">
+            <ul>
+              <li>COPYRIGHT @2023 All Rights Reserved.</li>
+              <li>00사무소 : (00000) 000도 00시 00구 00로 00번길 0, 0층000호 TEL : 055-263-2060 FAX : 055-263-2087</li>
+            </ul>
+          </div>
+        </div>
       </footer>
-    </div>
-  </body>
+    </section>
+  </div>
+</body>
 </html>
