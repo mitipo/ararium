@@ -40,6 +40,13 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
     <title>아라리움</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5GG22SJX');</script>
+      <!-- End Google Tag Manager -->
     <!-- swiper 링크 -->
     <link
       rel="stylesheet"
@@ -132,7 +139,7 @@
             </ul>
             <a href="#" class="navbar_toggleBtn">
               <i class="fa-solid fa-bars"></i>
-              <i class="fa-solid fa-xmark"></i>
+              <i class="fa-solid fa-xmark" id="header-xmark"></i>
             </a>
           </nav>
         </div>
@@ -159,6 +166,7 @@
                   slides-per-view="4"
                   space-between="30"
                   free-mode="true"
+                  navigation="true" pagination="true" keyboard="true" mousewheel="true"
                   data-aos="fade-up"
                   data-aos-offset="200"
                   data-aos-delay="200"
@@ -715,6 +723,14 @@
         </div>
       </footer>
     </section>
+    <!-- 고정메뉴 -->
+    <section class="fixedmenu">
+      <a href="sub_ticketing.html" class="ticketing">예매</a>
+    </section>
   </div>
 </body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GG22SJX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </html>

@@ -40,26 +40,158 @@
   [endif]-->
   <script src="js/prefixfree.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="js/header.js"></script>
   <script src="js/sub_ticketing.js"></script>
+  <script src="js/footer.js"></script>
 </head>
 <body>
   <div class="wrap">
     <!-- 상단 -->
     <header class="header">
       <div class="inner">
-
+        <!-- 메뉴 -->
+        <nav class="nav_bar">
+          <!-- 로고 -->
+          <a href="index.html" alt="아라리움" class="logo">
+            <img src="images/logo_w02.png" alt="아라리움" />
+          </a>
+          <ul class="gnb">
+            <li>
+              <a href="#" alt="아라리움">아라리움</a>
+              <ul class="submenu">
+                <li><a href="#" alt="공지사항">공지사항</a></li>
+                <li><a href="#" alt="아라리움 소개">아라리움 소개</a></li>
+                <li><a href="#" alt="관람안내">관람안내</a></li>
+                <li><a href="#" alt="보도자료">보도자료</a></li>
+                <li><a href="#" alt="자주 묻는 질문">자주 묻는 질문</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" alt="연간이용권 고객 안내">연간이용권 고객 안내</a>
+              <ul class="submenu">
+                <li>
+                  <a href="#" alt="연간이용권 고객 안내"
+                    >연간이용권 고객 안내</a
+                  >
+                </li>
+                <li>
+                  <a href="#" alt="연간이용권 고객 혜택"
+                    >연간이용권 고객 혜택</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" alt="아라리움 스토리">아라리움 스토리</a>
+              <ul class="submenu">
+                <li><a href="#" alt="아라리움 스토리">아라리움 스토리</a></li>
+                <li><a href="#" alt="아라리움 친구들">아라리움 친구들</a></li>
+                <li><a href="#" alt="공연 체험 소개">공연 체험 소개</a></li>
+                <li>
+                  <a href="#" alt="공연 체험 시간표">공연 체험 시간표</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" alt="이벤트">이벤트</a>
+              <ul class="submenu"></ul>
+            </li>
+          </ul>
+          <a href="#" class="navbar_toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+        </nav>
       </div>
     </header>
     <!-- 메인 -->
     <div class="main">
-      <div class="inner">
-
+      <h2 class="ticketing-title">
+        <div class="inner">
+          티켓 예매
+        </div>
+      </h2>
+      <h3 class="visit">
+        <div class="inner">
+          방문 일자 / 인원 선택
+        </div>
+      </h3>
+      <div class="date-choice">
+        <div class="inner">
+          <ul class="date">
+            <li><a href="#">월<span>4</span></a></li>
+            <li><a href="#">화<span>5</span></a></li>
+            <li><a href="#">수<span>6</span></a></li>
+            <li><a href="#">목<span>7</span></a></li>
+            <li><a href="#">금<span>8</span></a></li>
+            <li class="sat"><a href="#">토<span>9</span></a></li>
+            <li class="sun"><a href="#">일<span>10</span></a></li>
+          </ul>
+        </div>
       </div>
+      <div class="people-choice">
+        <div class="inner">
+          <div class="adult">
+            <div class="left">
+              <span class="kind">어른</span>
+              <span class="desc">만 19세 이상</span>
+            </div>
+            <div class="right">
+              <span class="number">0</span>
+              <div class="btn">
+                <button class="minus">-</button>
+                <button class="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="teenager">
+            <div class="left">
+              <span class="kind">청소년</span>
+              <span class="desc">만 13세 이상 ~ 만 18 세</span>
+            </div>
+            <div class="right">
+              <span class="number">0</span>
+              <div class="btn">
+                <button class="minus">-</button>
+                <button class="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="child">
+            <div class="left">
+              <span class="kind">어린이</span>
+              <span class="desc">36개월 이상 ~ 만 12세</span>
+            </div>
+            <div class="right">
+              <span class="number">0</span>
+              <div class="btn">
+                <button class="minus">-</button>
+                <button class="plus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
     <!-- 하단 -->
     <footer class="footer">
       <div class="inner">
-
+        <section class="btn-section">
+          <button class="btn-tw"><i class="fab fa-lg first-logo fa-twitter"></i><i class="fab fa-lg second-logo fa-twitter"></i></button>
+          <button class="btn-fb"><i class="fab fa-lg first-logo fa-facebook-f"></i><i class="fab fa-lg second-logo fa-facebook-f"></i></button>
+          <button class="btn-ig"><i class="fab fa-lg first-logo fa-instagram"></i><i class="fab fa-lg second-logo fa-instagram"></i></button>
+        </section>
+        <div class="copyright">
+          <ul>
+            <li>COPYRIGHT @2023 All Rights Reserved.</li>
+            <li>00사무소 : (00000) 000도 00시 00구 00로 00번길 0, 0층000호<span class="line">&emsp;|&emsp;</span></li>
+            <li>TEL : 055-263-2060&emsp;|&emsp;FAX : 055-263-2087</li>
+          </ul>
+        </div>
+        <a href="#visual" class="topbtn">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
       </div>
     </footer>
   </div>
