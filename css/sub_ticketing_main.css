@@ -1,6 +1,75 @@
 /* 예매하기_메인 */
 .main {
-
+  position: relative;
+  width: 100%;
+}
+.ticketing-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  padding: 35px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+.visit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+.date-choice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+.date li a {
+  color: #fff;
+}
+.date a span {
+  display: block;
+  padding-top: 10px;
+}
+.date .sat a {
+  color: blue;
+}
+.date .sun a {
+  color: red;
+}
+.people-choice .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+.people-choice .inner > div {
+  display: flex;
+}
+.people-choice .inner > div .left span {
+  display: block;
+}
+.people-choice .inner > div .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media all and (max-width: 1680px){
   
