@@ -7,11 +7,19 @@
   background-size: cover;
 }
 .event .inner {
-  padding-top: 5%;
+  height: calc(100vh - 310px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 5%; */
 }
 .event-title {
+  width: 100%;
   color: #fff;
   font-size: 2rem;
+  text-align: left;
+  display: block;
   padding: 10px 0px 30px 0px;
 }
 .swiper {

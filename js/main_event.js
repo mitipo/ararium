@@ -10,8 +10,8 @@ window.addEventListener("load", function() {
       delay: 5000,
     },
     loop: true,
-    slidesPerView: 5,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    // spaceBetween: 10,
     autoHeight: true,
     pagination: {
       el: '.promotion .swiper-pagination',
