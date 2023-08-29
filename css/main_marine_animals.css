@@ -14,7 +14,7 @@
   height: 100%;
 }
 
-.mar_etc {
+/* .mar_etc {
   width: 100%;
   height: 100%;
   background: url("../images/main_marine_etc.png") no-repeat right;
@@ -23,7 +23,7 @@
   right: 0;
   z-index: 8000;
   background-size:contain;
-}
+} */
 #bb-outer {
   display: block;
   position: absolute;
