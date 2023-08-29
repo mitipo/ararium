@@ -92,7 +92,7 @@
 }
 @media all and (max-width: 1024px){
   .nav_bar > ul {
-    gap: 0 40px;
+    gap: 0 47px;
   }
 }
 @media all and (max-width: 760px){

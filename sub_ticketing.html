@@ -47,7 +47,7 @@
 <body>
   <div class="wrap">
     <!-- 상단 -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="inner">
         <!-- 메뉴 -->
         <nav class="nav_bar">
@@ -99,7 +99,7 @@
           </ul>
           <a href="#" class="navbar_toggleBtn">
             <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark" id="header-xmark"></i>
           </a>
         </nav>
       </div>
@@ -172,7 +172,83 @@
           </div>
         </div>
       </div>
-      
+      <h3 class="benefit">
+        <div class="inner">
+          총 2개의 혜택
+        </div>
+      </h3>
+      <section class="tab">
+        <div class="tab-menu">
+            <div class="tab-btn inner">
+                <ul>
+                    <li>이달의 혜택 (2)</li>
+                    <li>제휴카드 (0)</li>
+                    <li>포인트 (0)</li>
+                </ul>
+            </div>
+            <div class="tab-cont inner">
+                <div class="month">
+                  <ul class="month-benefit">
+                    <li class="first-benefit">
+                      <h4>이용권 이름</h4>
+                      <div class="benefit-content">
+                        <div class="left">
+                          <div class="img"></div>
+                          <!-- <img src="" alt=""> -->
+                          <span class="benefit-name">행사 이름</span>
+                        </div>
+                        <div class="right">
+                          <h5>1매 할인</h5>
+                          <div class="price-adult">
+                            <h5>어른 X 1</h5> 
+                            <span class="benefit-price">42,000원</span>
+                          </div>
+                          <div class="final-price">
+                            <h5>최종결제금액</h5>
+                            <span class="total-price">42,000원</span>
+                          </div>
+                          <button class="ticketing-btn">예매하기</button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="second-benefit">
+                      <h4>이용권 이름</h4>
+                      <div class="benefit-content">
+                        <div class="left">
+                          <div class="img"></div>
+                          <!-- <img src="" alt=""> -->
+                          <span class="benefit-name">행사 이름</span>
+                        </div>
+                        <div class="right">
+                          <h5>1매 할인</h5>
+                          <div class="price-adult">
+                            <h5>어른 X 1</h5> 
+                            <span class="benefit-price">42,000원</span>
+                          </div>
+                          <div class="final-price">
+                            <h5>최종결제금액</h5>
+                            <span class="total-price">42,000원</span>
+                          </div>
+                          <button class="ticketing-btn">예매하기</button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                    <div class="no-benefit">
+                      해당 내역이 없습니다.
+                    </div>
+                </div>
+                <div class="point">
+                  <div class="no-benefit">
+                    해당 내역이 없습니다.
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- //tab-menu -->
+    </section>
     </div>
     <!-- 하단 -->
     <footer class="footer">
@@ -189,7 +265,7 @@
             <li>TEL : 055-263-2060&emsp;|&emsp;FAX : 055-263-2087</li>
           </ul>
         </div>
-        <a href="#visual" class="topbtn">
+        <a href="#header" class="topbtn">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </div>
