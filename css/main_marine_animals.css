@@ -14,19 +14,174 @@
   height: 100%;
 }
 
-/* 매너티 */
-#marineanimal-x {
+.mar_etc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/main_marine_etc.png") no-repeat right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 8000;
+  background-size:contain;
+}
+#bb-outer {
   display: block;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  padding-right: 10px;
-  padding-top: 10px;
-  cursor: pointer;
-  float: right;
-  z-index: 99999 !important;
+  position: absolute;
+  top: 5%;
+  width: 60%;
+  padding: 10px 20px;height:fit-content;
+}
+#bb-outer .bubbles {
+  display: inline-block;
   position: relative;
 }
+#bb-outer .bubbles .bubble {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 20px;
+  background: rgba(113, 186, 255, 0.7);
+}
+#bb-outer .bubbles h3 {
+  font-size: 82px;
+  font-weight: 900;
+  font-family: "EF_cucumbersalad";
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  color: #010d26;
+}
+#bb-outer  p {
+  font-family: "EF_cucumbersalad";
+  padding-top: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* 배경 물고기 이동 */
+.fishs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.fishs li {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: block;
+  background-color: #90d6ee;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 30px;
+  transform: rotateZ(45deg) scale(0.05);
+}
+
+.fishs li:hover {
+  cursor: pointer;
+  transform: rotateZ(90deg) scale(0.05);
+}
+.fishs li {
+  animation: swing 60s linear 0.1s infinite;
+}
+
+.fishs li::after {
+  content: "";
+  position: absolute;
+  border: 5px solid #90d6ee;
+  border-top: 0 solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  bottom: -3px;
+  left: -5px;
+  background-color: #90d6ee;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: tail 2s linear 0.1s infinite;
+}
+
+.fishs li:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  border: 15px solid #90d6ee;
+  border-top: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  bottom: 8px;
+  left: 0px;
+  transform: rotateZ(45deg);
+}
+
+.bubbles {
+  display: block;
+  position: relative;
+}
+.bubbles::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 30px;
+  background-color: #39a0ed;
+  animation: buble 2s linear 2s infinite;
+}
+
+.bubbles::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #39a0ed;
+  animation: buble 3s linear 2s infinite;
+}
+
+@keyframes buble {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, -50px);
+  }
+}
+
+@keyframes tail {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(40deg) rotateZ(45deg);
+    border-color: #196096;
+  }
+  75% {
+    transform: rotateX(0deg) rotateY(-40deg) rotateZ(45deg);
+    border-color: #196096;
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    left: 0;
+    transform: rotateY(0deg) rotateZ(45deg);
+  }
+  50% {
+    left: 100%;
+    transform: rotateY(0deg) rotateZ(45deg);
+  }
+  100% {
+    left: 100%;
+    transform: rotateY(180deg) rotateZ(45deg);
+  }
+}
+
+/* 매너티 */
+
 .marineanimal .marineanimal-box .ani1 {
   position: absolute;
   top: 20%;
@@ -36,6 +191,38 @@
   transform: translate(2s);
 }
 
+/* ///전갱이/// */
+.marineanimal .marineanimal-box .ani2 {
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  display: none;
+  z-index: 9000;
+  transform: translate(2s);
+}
+/* 거북이 */
+.marineanimal .marineanimal-box .ani3 {
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  display: none;
+  z-index: 9000;
+  transform: translate(2s);
+}
+
+/* 바다동물 소개박스 */
+#marineanimal-x {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+  float: right;
+  z-index: 99999;
+  position: relative;
+}
 .marineanimal-ex {
   position: absolute;
   display: block;
@@ -171,23 +358,6 @@
   line-height: 1.2;
 }
 
-/* ///전갱이/// */
-.marineanimal .marineanimal-box .ani2 {
-  position: absolute;
-  top: 65%;
-  left: 0%;
-  display: none;
-  z-index: 9000;
-  transform: translate(2s);
-}
-/* 거북이 */
-.marineanimal .marineanimal-box .ani3 img {
-  position: absolute;
-  display: block;
-  top: 45%;
-  left: 70%;
-}
-
 /* dot  */
 .marineanimal .marineanimal-box .dot {
   position: relative;
@@ -253,6 +423,32 @@
   100% {
     transform: scale(2.5);
     opacity: 0;
+  }
+}
+/* 마우스클릭시 파동 */
+div.clickEffect {
+  position: fixed;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #7bd5ee;
+  border-radius: 50%;
+  animation: clickEffect 0.8s ease-out;
+  z-index: 5;
+}
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.25em;
+    border-width: 0.3rem;
+  }
+  100% {
+    opacity: 0.1;
+    width: 15em;
+    height: 15em;
+    margin: -7.5em;
+    border-width: 0.01rem;
   }
 }
 
