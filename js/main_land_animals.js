@@ -1,65 +1,82 @@
-// DOM(HTML 태그 로딩 완료시 실행)
-// $(document).ready(function() {
-
-// });
-// 멀티미디어 리소스 로딩 완료 후 실행
 window.addEventListener("load", function () {
-  AOS.init({
-    offset: 220,
-    delay: 5000,
-    duration: 800,
-  });
-});
-//
-
-//
-// 이미지 움직임
-const angle = 20;
-const rotateCard = window;
-const lerp = (start, end, amount) => {
-  return (1 - amount) * start + amount * end;
-};
-const remap = (value, oldMax, newMax) => {
-  const newValue = ((value + oldMax) * (newMax * 2)) / (oldMax * 2) - newMax;
-  return Math.min(Math.max(newValue, -newMax), newMax);
-};
-window.addEventListener("DOMContentLoaded", (event) => {
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((e) => {
-    e.addEventListener("mousemove", (event) => {
-      const rect = e.getBoundingClientRect();
-      const centerX = (rect.left + rect.right) / 2;
-      const centerY = (rect.top + rect.bottom) / 2;
-      const posX = event.pageX - centerX;
-      const posY = event.pageY - centerY;
-      const x = remap(posX, rect.width / 2, angle);
-      const y = remap(posY, rect.height / 2, angle);
-      e.dataset.rotateX = x;
-      e.dataset.rotateY = -y;
-    });
-
-    e.addEventListener("mouseout", (event) => {
-      e.dataset.rotateX = 0;
-      e.dataset.rotateY = 0;
+  $(function () {
+    $(".slide_list").bxSlider({
+      auto: true,
+      pager: true,
+      speed: 3900,
+      controls: true,
+      moveSlides: 1,
+      maxSlides: 5,
+      minSlides: 1,
+      slideWidth: 280,
+      slideMargin: 30,
+      autoHover: false,
+      autoControls: true,
+      adaptiveHeight: true,
     });
   });
 
-  const update = () => {
-    cards.forEach((e) => {
-      let currentX = parseFloat(
-        e.style.getPropertyValue("--rotateY").slice(0, -1)
-      );
-      let currentY = parseFloat(
-        e.style.getPropertyValue("--rotateX").slice(0, -1)
-      );
-      if (isNaN(currentX)) currentX = 0;
-      if (isNaN(currentY)) currentY = 0;
-      const x = lerp(currentX, e.dataset.rotateX, 0.06);
-      const y = lerp(currentY, e.dataset.rotateY, 0.06);
-      e.style.setProperty("--rotateY", x + "deg");
-      e.style.setProperty("--rotateX", y + "deg");
-    });
-  };
-  setInterval(update, 1000 / 100);
+  var $slider;
+
+  function buildSliderConfiguration() {
+    var deviceWidth = $(window).width();
+
+    /* 반응형으로 설정할 옵션 정의 */
+    var slideNum;
+    var slideMargin;
+
+    /* 화면 사이즈별 슬라이드 갯수, 마진 설정, 기타 옵션도 설정 가능 */
+    if (deviceWidth < 480) {
+      slideNum = 1;
+      slideMargin = 20;
+    } else if (deviceWidth < 760) {
+      slideNum = 2;
+      slideMargin = 30;
+    } else if (deviceWidth < 1024) {
+      slideNum = 3;
+      slideMargin = 30;
+    } else {
+      slideNum = 5;
+      slideMargin = 30;
+    }
+
+    return {
+      slideWidth: 280,
+      autoControls: true,
+      auto: true,
+      autoHover: true,
+      adaptiveHeight: true,
+      pager: false,
+      moveSlides: 1,
+      slideMargin: slideMargin /*반응형 옵션*/,
+      minSlides: slideNum /*반응형 옵션*/,
+      maxSlides: slideNum /*반응형 옵션*/,
+    };
+  }
+
+  function configureSlider() {
+    var config = buildSliderConfiguration();
+
+    if ($slider && $slider.reloadSlider) {
+      $slider.reloadSlider(config);
+    } else {
+      $slider =
+        $(".slide_list").bxSlider(
+          config
+        ); /* 슬라이더 클래스 또는 아이디 입력 */
+    }
+  }
+
+  $(".slider-prev").click(function () {
+    var current = $slider.getCurrentSlide();
+    $slider.goToPrevSlide(current) - 1;
+  });
+
+  $(".slider-next").click(function () {
+    var current = $slider.getCurrentSlide();
+    $slider.goToNextSlide(current) + 1;
+  });
+
+  $(window).on("orientationchange resize", configureSlider);
+  configureSlider();
 });
-//
