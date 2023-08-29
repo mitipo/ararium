@@ -14,45 +14,118 @@
   50%,
   80%,
   100% {
-    transform: translateY(0); /* 시작과 끝 위치 */
+    transform: translateX(0); /* 시작과 끝 위치 */
   }
   40% {
-    transform: translateY(-23px); /* 통통 튀는 중간 위치 */
+    transform: translateX(-30px); /* 통통 튀는 중간 위치 */
   }
 }
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0); /* 시작과 끝 위치 */
+  }
+  40% {
+    transform: translateX(30px); /* 통통 튀는 중간 위치 */
+  }
+}
+
+/* 심해 타이틀 */
+.deepseafish-title {
+  position: absolute;
+  top: 13%;
+  left: 1%;
+  font-size: 70px;
+  color: #fff;
+  font-weight: 500;
+  user-select: none;
+  text-shadow: 1px 2px 3px rgb(56, 56, 56);
+}
+.deepseafish-sub-title {
+  position: absolute;
+  top: 23%;
+  left: 1%;
+  font-size: 18px;
+  color: #ebeaea;
+  text-indent: 4px;
+  user-select: none;
+  text-shadow: 1px 2px 5px rgb(56, 56, 56);
+}
+
 /* 마크 */
-.deepseafish .deepseafish-mark1 img {
-  width: 75%;
+/* .deepseafish .deepseafish-mark1 img,
+.deepseafish .deepseafish-mark2 img,
+.deepseafish .deepseafish-mark3 img,
+.deepseafish .deepseafish-mark4 img {
+  width: 55%;
+} */
+.deepseafish-mark1 i,
+.deepseafish-mark2 i,
+.deepseafish-mark3 i,
+.deepseafish-mark4 i {
+  color: #0f97e7;
+  transition: color 0.3s;
+  text-shadow: 0px 2px 5px #026eac94;
 }
-.deepseafish .deepseafish-mark2 img {
-  width: 75%;
+.deepseafish-mark1 i {
+  transform: scaleX(-1) !important;
+  font-size: 28px;
 }
-.deepseafish .deepseafish-mark3 img {
-  width: 75%;
+.deepseafish-mark2 i {
+  font-size: 40px;
+  transform: scaleX(-1) !important;
+}
+.deepseafish-mark3 i {
+  font-size: 35px;
+}
+.deepseafish-mark4 i {
+  font-size: 38px;
 }
 .deepseafish-mark1 {
   position: absolute;
-  top: 15%;
-  left: 70%;
-  animation: bounce 2s infinite;
-  animation-delay: 0s;
+  top: 20%;
+  left: 73%;
+  animation: bounce 4s infinite;
+  animation-delay: 0.5s;
   cursor: pointer;
+  transition: animation 2s ease-in-out;
 }
 .deepseafish-mark2 {
   position: absolute;
-  top: 31%;
-  left: 19%;
-  animation: bounce 2s infinite;
-  animation-delay: 1s;
+  top: 47%;
+  left: 14%;
+  animation: bounce 4s infinite;
+  animation-delay: 2.5s;
   cursor: pointer;
+  transition: animation 2s ease-in-out;
 }
 .deepseafish-mark3 {
   position: absolute;
-  top: 60%;
-  left: 75%;
-  animation: bounce 2s infinite;
-  animation-delay: 0.7s;
+  top: 53%;
+  left: 45%;
+  animation: bounce2 4s infinite;
+  animation-delay: 2s;
   cursor: pointer;
+  transition: animation 2s ease-in-out;
+}
+.deepseafish-mark4 {
+  position: absolute;
+  top: 69%;
+  left: 84%;
+  animation: bounce2 4s infinite;
+  animation-delay: 1.5s;
+  cursor: pointer;
+  transition: animation 2s ease-in-out;
+  z-index: 1;
+}
+.deepseafish-mark1 i:hover,
+.deepseafish-mark2 i:hover,
+.deepseafish-mark3 i:hover,
+.deepseafish-mark4 i:hover {
+  color: #78ceff !important;
 }
 
 /* 마크를 눌렀을 때 나올 내용 */
@@ -64,64 +137,64 @@
   width: 60%;
   height: auto;
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 3%;
   border-radius: 5px;
 }
-#deepseafish1 {
+#deepseafish1,
+#deepseafish2,
+#deepseafish3,
+#deepseafish4 {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
 }
-#deepseafish2 {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-#deepseafish3 {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
+
 /* 내용 안의 사진 */
-#deepseafish1 img {
-  width: 100%;
-  float: left;
-  margin-right: 10%;
-  cursor: pointer;
-}
-#deepseafish2 img {
-  width: 100%;
-  float: left;
-  margin-right: 10%;
-  cursor: pointer;
-}
-#deepseafish3 img {
+#deepseafish1 img,
+#deepseafish2 img,
+#deepseafish3 img,
+#deepseafish4 img {
   width: 100%;
   float: left;
   margin-right: 10%;
   cursor: pointer;
 }
 .deepseafish-img {
-  width: 38%;
+  width: 44%;
   height: 100%;
   float: left;
   margin-right: 5%;
 }
+
+/* 사진밑 span */
+.deepseafish-img-span {
+  width: 100%;
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  clear: both;
+  padding-top: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
 /* 내용 안의 글자 */
 .deepseafish-content-txt {
-  width: 56%;
+  width: 48%;
   max-height: 450px;
-  font-size: 14px;
+  padding-right: 2%;
+  font-size: 15px;
   letter-spacing: 1px;
   user-select: none;
   float: left;
   overflow: auto;
   height: 100%;
+  position: relative;
 }
 .deepseafish-content-txt::-webkit-scrollbar {
   width: 5px;
-  margin-right: 1%;
+  padding: 0;
 }
 .deepseafish-content-txt::-webkit-scrollbar-track {
   background: #999;
@@ -132,9 +205,9 @@
   border-radius: 5px;
 }
 /* 내용 제목 */
-.deepseafish-content-title {
+.deepseafish-content-title h2 {
   font-size: 30px;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 .deepseafish-content-title span {
   font-size: 20px;
@@ -146,16 +219,16 @@
 }
 .deepseafish-content-txt span {
   margin-bottom: 0.5%;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   margin-right: 0.5%;
 }
-
 /* 내용 닫기 버튼 */
 .deepseafish-content-close1,
 .deepseafish-content-close2,
-.deepseafish-content-close3 {
-  font-size: 28px;
+.deepseafish-content-close3,
+.deepseafish-content-close4 {
+  font-size: 25px;
   position: absolute;
   top: 5%;
   right: 5%;
@@ -165,7 +238,8 @@
 /* 내용 안의 큰 사진 닫기 버튼 */
 .deepseafish-content-close1-1,
 .deepseafish-content-close2-1,
-.deepseafish-content-close3-1 {
+.deepseafish-content-close3-1,
+.deepseafish-content-close4-1 {
   font-size: 28px;
   position: absolute;
   top: 5%;
@@ -177,7 +251,8 @@
 /* 내용 안의 사진을 눌렀을 때 나올 큰 사진 */
 .deepseafish-img-big1,
 .deepseafish-img-big2,
-.deepseafish-img-big3 {
+.deepseafish-img-big3,
+.deepseafish-img-big4 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,33 +270,54 @@
   z-index: 999;
   transition: all 0.2s;
 }
-.deepseafish-img-big-show {
+.deepseafish-img-big2 {
+  width: 40% !important;
+}
+
+/* js 용 클래스 */
+.deepseafish-show {
   opacity: 1 !important;
   visibility: visible !important;
 }
 
 .deepseafish-img-big1::-webkit-scrollbar,
 .deepseafish-img-big2::-webkit-scrollbar,
-.deepseafish-img-big3::-webkit-scrollbar {
+.deepseafish-img-big3::-webkit-scrollbar,
+.deepseafish-img-big4::-webkit-scrollbar {
   width: 5px;
-  margin-right: 1%;
 }
 .deepseafish-img-big1::-webkit-scrollbar-track,
 .deepseafish-img-big2::-webkit-scrollbar-track,
-.deepseafish-img-big3::-webkit-scrollbar-track {
+.deepseafish-img-big3::-webkit-scrollbar-track,
+.deepseafish-img-big4::-webkit-scrollbar-track {
   background: #999;
   border-radius: 5px;
 }
 .deepseafish-img-big1::-webkit-scrollbar-thumb,
 .deepseafish-img-big2::-webkit-scrollbar-thumb,
-.deepseafish-img-big3::-webkit-scrollbar-thumb {
+.deepseafish-img-big3::-webkit-scrollbar-thumb,
+.deepseafish-img-big4::-webkit-scrollbar-thumb {
   background: #0f97e7;
   border-radius: 5px;
 }
 
 @media all and (max-width: 1680px) {
 }
+@media all and (max-width: 1650px) {
+  .deepseafish-title {
+    left: 3%;
+  }
+  .deepseafish-sub-title {
+    left: 3%;
+  }
+}
 @media all and (max-width: 1280px) {
+  .deepseafish-title {
+    left: 5%;
+  }
+  .deepseafish-sub-title {
+    left: 5%;
+  }
 }
 @media all and (max-width: 1024px) {
 }
@@ -234,10 +330,13 @@
   #deepseafish1 .deepseafish-content-txt {
     max-height: 180px;
   }
+  .deepseafish-img-span {
+    display: none;
+  }
   .deepseafish-content-txt {
     width: 100%;
     max-height: 200px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
     user-select: none;
     float: left;
@@ -250,15 +349,16 @@
     font-weight: bold;
     margin-right: 0.5%;
   }
-  .deepseafish-content-title {
-    font-size: 24px;
+  .deepseafish-content-title h2 {
+    font-size: 20px;
   }
   .deepseafish-content-title span {
     font-size: 18px;
   }
   .deepseafish-img-big1,
   .deepseafish-img-big2,
-  .deepseafish-img-big3 {
+  .deepseafish-img-big3,
+  .deepseafish-img-big4 {
     display: none;
     visibility: hidden;
   }
@@ -266,6 +366,42 @@
 @media all and (max-width: 760px) {
 }
 @media all and (max-width: 748px) {
+  .deepseafish-title {
+    font-size: 60px;
+  }
+  .deepseafish-sub-title {
+    font-size: 16px;
+    top: 22%;
+  }
+}
+@media all and (max-width: 550px) {
+  .deepseafish-mark1 {
+    top: 29%;
+    left: 73%;
+  }
 }
 @media all and (max-width: 480px) {
+  .deepseafish-title {
+    font-size: 50px;
+  }
+  .deepseafish-sub-title {
+    font-size: 13px;
+    top: 20%;
+  }
+  .deepseafish-mark1 {
+    top: 29%;
+    left: 73%;
+  }
+  .deepseafish-mark2 {
+    top: 47%;
+    left: 14%;
+  }
+  .deepseafish-mark3 {
+    top: 53%;
+    left: 45%;
+  }
+  .deepseafish-mark4 {
+    top: 69%;
+    left: 77%;
+  }
 }

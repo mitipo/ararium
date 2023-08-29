@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
   });
   // 햄버거바 클릭하면 메뉴가 아래로 펼쳐짐
   const hambergerBar = document.querySelector(".fa-bars");
-  const xmark = document.querySelector(".fa-xmark");
+  const xmark = document.querySelector("#header-xmark");
   let gnb = document.querySelector(".gnb");
 
   hambergerBar.addEventListener("click", function() {

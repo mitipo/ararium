@@ -1,19 +1,253 @@
 /* 예매하기_메인 */
+#wrap {
+  position: relative;
+}
 .main {
-
+  position: relative;
+  width: 100%;
+}
+.inner {
+  max-width: 1200px;
+}
+.ticketing-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  /* margin-top: 25px; */
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 3px solid #777;
+}
+.visit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+.date-choice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+}
+.date li {
+  border: 2px solid rgba(51, 51, 51, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+.date li.active {
+  border: 2px solid #0d0d26;
+  padding: 20px;
+  border-radius: 10px;
+}
+.date li a {
+  color: #333;
+}
+.date a span {
+  display: block;
+  padding-top: 10px;
+}
+.date .sat a {
+  color: #006eff;
+}
+.date .sun a {
+  color: #ff0015;
+}
+.people-choice {
+  border-bottom: 10px solid #777;
+}
+.people-choice .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+.people-choice .inner > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+}
+.people-choice .inner > div .left span {
+  display: block;
+  min-width: 90px;
+}
+.people-choice .inner > div .left .kind {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.people-choice .inner > div .left .desc {
+  font-size: 0.6rem;
+}
+.people-choice .inner > div .left .desc {
+  padding-top: 10px;
+}
+.people-choice .inner > div .right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 20px; */
+}
+.people-choice .inner > div .right .number {
+  padding: 0px 20px;
+  text-align: end;
+}
+.people-choice .inner > div .right .btn {
+  display: flex;
+  text-align: center;
+}
+.people-choice .inner > div .right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  background-color: #37a7f1;
+}
+.benefit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+.tab-btn {
+  border-bottom: 1px solid #ccc;
+  background-color: #0d0d26;
+}
+.tab-btn > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+}
+.tab-btn > ul > li {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.month-benefit {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0px;
+}
+.month-benefit > li:first-child {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 50px 0px;
+}
+.month-benefit > li:first-child::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  margin: 50px 0 0 0;
+  background-color: #ccc;
+}
+.month-benefit > li  h4 {
+  padding: 0px 0px 20px 0px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.month-benefit > li .benefit-content {
+  display: flex;
+}
+.benefit-content .left {
+  display: flex;
+  flex-basis: 65%;
+}
+.benefit-content .left .benefit-name {
+  padding: 0px 20px;
+}
+.benefit-content .right {
+  flex-basis: 35%;
+}
+.benefit-content .right > h5 {
+  padding-bottom: 10px;
+}
+.price-adult .benefit-price::before {
+  content: "70,000원";
+  margin-right: 10px;
+  text-decoration: line-through;
+  font-size: 0.6rem;
+}
+.benefit-content .right div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px 5px 0px;
+}
+.img {
+  width: 120px;
+  height: 155px;
+  background-color: black;
+}
+.ticketing-btn {
+  text-align: center;
+  float: right;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 25px;
+  background-color: #37a7f1;
+  color: #fff;
+}
+.no-benefit {
+  text-align: center;
+  padding: 200px 0px;
 }
 @media all and (max-width: 1680px){
   
 }
 @media all and (max-width: 1280px){
-  
+
 }
 @media all and (max-width: 1024px){
-  
 }
 @media all and (max-width: 760px){
-  
+  .people-choice .inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .price-adult .benefit-price::before {
+    margin-right: 5px;
+  }
 }
 @media all and (max-width: 480px){
-  
+  .month-benefit > li .benefit-content {
+    flex-direction: column;
+  }
+  .benefit-content .right {
+    margin-top: 35px;
+  }
+  .price-adult .benefit-price::before {
+    margin-right: 10px;
+  }
+  .ticketing-btn {
+    width: 100%;
+  }
 }
