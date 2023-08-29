@@ -14,84 +14,348 @@
   height: 100%;
 }
 
-/* 매너티 */
-.marineanimal .marineanimal-box .ani1 img {
+.mar_etc {
+  width: 100%;
+  height: 100%;
+  background: url("../images/main_marine_etc.png") no-repeat right;
   position: absolute;
-  display: block;
-  top: 20%;
-  left: 10%;
+  top: 0;
+  right: 0;
+  z-index: 8000;
+  background-size:contain;
 }
-.marineanimal-ex1 {
+#bb-outer {
+  display: block;
   position: absolute;
-  display: block;
-  width: 70%;
-  height: 60%;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
+  top: 5%;
+  width: 60%;
+  padding: 10px 20px;height:fit-content;
 }
-.marineanimal-ex1 .marineanimal-in {
-  position: absolute;
-  width: 90%;
-  height: 90%;
-  border: 5px solid #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.marineanimal-ex1 .marineanimal-in .marineanimal-title {
-  display: block;
-  /* position: absolute;
-  left: 50%; */
+#bb-outer .bubbles {
+  display: inline-block;
   position: relative;
-  height: 50px;
 }
-.marineanimal-ex1 .marineanimal-in h2 {
+#bb-outer .bubbles .bubble {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 20px;
+  background: rgba(113, 186, 255, 0.7);
+}
+#bb-outer .bubbles h3 {
+  font-size: 82px;
+  font-weight: 900;
+  font-family: "EF_cucumbersalad";
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  color: #010d26;
+}
+#bb-outer  p {
+  font-family: "EF_cucumbersalad";
+  padding-top: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* 배경 물고기 이동 */
+.fishs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.fishs li {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: block;
+  background-color: #90d6ee;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 30px;
+  transform: rotateZ(45deg) scale(0.05);
+}
+
+.fishs li:hover {
+  cursor: pointer;
+  transform: rotateZ(90deg) scale(0.05);
+}
+.fishs li {
+  animation: swing 60s linear 0.1s infinite;
+}
+
+.fishs li::after {
+  content: "";
+  position: absolute;
+  border: 5px solid #90d6ee;
+  border-top: 0 solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  bottom: -3px;
+  left: -5px;
+  background-color: #90d6ee;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  animation: tail 2s linear 0.1s infinite;
+}
+
+.fishs li:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  border: 15px solid #90d6ee;
+  border-top: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  bottom: 8px;
+  left: 0px;
+  transform: rotateZ(45deg);
+}
+
+.bubbles {
+  display: block;
+  position: relative;
+}
+.bubbles::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 30px;
+  background-color: #39a0ed;
+  animation: buble 2s linear 2s infinite;
+}
+
+.bubbles::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #39a0ed;
+  animation: buble 3s linear 2s infinite;
+}
+
+@keyframes buble {
+  0% {
+    opacity: 0;
+    transform: translate(30px, 0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, -50px);
+  }
+}
+
+@keyframes tail {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(40deg) rotateZ(45deg);
+    border-color: #196096;
+  }
+  75% {
+    transform: rotateX(0deg) rotateY(-40deg) rotateZ(45deg);
+    border-color: #196096;
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    left: 0;
+    transform: rotateY(0deg) rotateZ(45deg);
+  }
+  50% {
+    left: 100%;
+    transform: rotateY(0deg) rotateZ(45deg);
+  }
+  100% {
+    left: 100%;
+    transform: rotateY(180deg) rotateZ(45deg);
+  }
+}
+
+/* 매너티 */
+
+.marineanimal .marineanimal-box .ani1 {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  display: none;
+  z-index: 9000;
+  transform: translate(2s);
+}
+
+/* ///전갱이/// */
+.marineanimal .marineanimal-box .ani2 {
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  display: none;
+  z-index: 9000;
+  transform: translate(2s);
+}
+/* 거북이 */
+.marineanimal .marineanimal-box .ani3 {
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  display: none;
+  z-index: 9000;
+  transform: translate(2s);
+}
+
+/* 바다동물 소개박스 */
+#marineanimal-x {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+  float: right;
+  z-index: 99999;
+  position: relative;
+}
+.marineanimal-ex {
+  position: absolute;
+  display: block;
+  width: 600px;
+  height: 600px;
+  background: #111845a6;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 888;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+.marineanimal-ex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.marineanimal-ex:hover:before {
+  left: -50%;
+  transform: skewX(-5deg);
+}
+.marineanimal-in {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid #f0a591;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+}
+.marineanimal-ex > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.marineanimal-ex > span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.marineanimal-ex > span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.marineanimal-ex > span:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.marineanimal-ex > span:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.marineanimal-ex > span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.marineanimal-ex .marineanimal-in .marineanimal-title {
+  position: relative;
+  height: 10%;
+}
+.marineanimal-title h2 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   font-size: 35px;
   color: #fff;
   display: block;
+  padding-right: 20px;
 }
-.marineanimal-ex1 .marineanimal-in h2 span {
-  font-size: 30px;
+.marineanimal-title h2 span {
+  font-size: 0.7em;
 }
-.marineanimal-ex1 .marineanimal-in .marineanimal-txt {
+.marineanimal-ex .marineanimal-in .marineanimal-txt {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 100;
   display: block;
-  /* position: absolute;
-  left: 50%;
-  transform: translateY(-50%); */
-  box-sizing: border-box;
-  width: 400px;
+  width: 100%;
   height: 100%;
+
+  overflow: auto;
 }
-.marineanimal-ex1 .marineanimal-in .marineanimal-txt li {
-  display: flex;
-  padding: 5px 0;
+.marineanimal-ex .marineanimal-in .marineanimal-txt li {
+  padding: 10px 0;
   color: #fff;
   font-size: 18px;
-  line-height: 1.5;
 }
-.marineanimal-ex1 .marineanimal-in .marineanimal-txt li > span {
-  width: 70px;
-}
-/* 전갱이 */
-.marineanimal .marineanimal-box .ani2 img {
-  position: absolute;
+.marineanimal-ex .marineanimal-in .marineanimal-txt li > span {
+  padding: 5px 0;
   display: block;
-  top: 65%;
-  left: 22%;
 }
-/* 거북이 */
-.marineanimal .marineanimal-box .ani3 img {
-  position: absolute;
-  display: block;
-  top: 45%;
-  left: 70%;
+.marineanimal-ex .marineanimal-in .marineanimal-txt li > p {
+  line-height: 1.2;
 }
 
 /* dot  */
@@ -111,6 +375,7 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   position: absolute;
+  cursor: pointer;
 }
 .marineanimal .marineanimal-box .dot_1 {
   position: absolute;
@@ -158,6 +423,32 @@
   100% {
     transform: scale(2.5);
     opacity: 0;
+  }
+}
+/* 마우스클릭시 파동 */
+div.clickEffect {
+  position: fixed;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: #7bd5ee;
+  border-radius: 50%;
+  animation: clickEffect 0.8s ease-out;
+  z-index: 5;
+}
+@keyframes clickEffect {
+  0% {
+    opacity: 1;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.25em;
+    border-width: 0.3rem;
+  }
+  100% {
+    opacity: 0.1;
+    width: 15em;
+    height: 15em;
+    margin: -7.5em;
+    border-width: 0.01rem;
   }
 }
 
