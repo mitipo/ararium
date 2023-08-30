@@ -10,13 +10,38 @@
 }
 .fixedmenu a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  /* border-radius: 5px; */
+  width: 60px;
+  height: 100px;
   position: fixed;
-  bottom: 160px;
-  right: 40px;
-  background-color: crimson;
+  bottom: 270px;
+  right: 0px;
+  color: #fff;
+  font-weight: 700;
+  background-color: rgba(0, 132, 255, 0.9);
+}
+.fixedmenu a i {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.fixedmenu a span {
+  font-weight: 500;
+}
+@media all and (max-width: 1680px){
+  
+}
+@media all and (max-width: 1280px){
+
+}
+@media all and (max-width: 1024px){
+  
+}
+@media all and (max-width: 760px){
+  
+}
+@media all and (max-width: 480px){
+  
 }
