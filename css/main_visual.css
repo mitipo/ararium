@@ -6,17 +6,160 @@
   background-position: center center;
   background-size: cover;
 }
+.leftcontent {
+  position: absolute;
+  top: 20%;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.visualtext {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 270px;
+}
+.visualtext > span {
+  display: block;
+  font-size: 3rem;
+}
+.animalintro {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.animalintro .gobtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(0, 132, 255);
+  border: none;
+  margin-right: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.animal-intro-text h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+.animal-intro-text p {
+  color: #cacaca;
+  font-size: 0.75rem;
+}
+.rightcontent {
+  width: 380px;
+  position: absolute;
+  top: 42%;
+  right: 25px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: right;
+  font-weight: 700;
+}
+.rightcontent p {
+  font-size: 0.75rem;
+  line-height: 1.65;
+  padding: 10px 0;
+  color: #cacaca;
+  font-weight: 500;
+}
+.swiper {
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+}
+.visual .fa-chevron-left,
+.visual .fa-chevron-right {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+.textbox {
+  margin-top: 230px;
+  display: flex;
+  justify-content: end;
+}
+.textbox div {
+  padding: 9px;
+  font-size: 1rem;
+}
+.textbox div .datetext {
+  margin-bottom: 5px;
+}
+.textbox div ul {
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: left;
+  font-weight: 500;
+}
+.textbox div ul li {
+  list-style: disc;
+  list-style-position : inside;
+  padding: 5px 0px;
+}
+.textbox1 {
+  width: 170px;
+  height: 170px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.textbox2 {
+  width: 170px;
+  height: 170px;
+  background-color: rgba(0, 132, 255, 0.75);
+}
 @media all and (max-width: 1680px){
   
 }
 @media all and (max-width: 1280px){
-  
+  .visualtext {
+    font-size: 3.5rem;
+  }
+  .visualtext > span {
+    font-size: 2.8rem;
+  }
+  .animal-intro-text h4 {
+    font-size: 1.1rem;
+  }
+  .rightcontent {
+    font-size: 1.1rem;
+  }
+  .textbox div {
+    font-size: 0.9rem;
+  }
+  .textbox div ul {
+    font-size: 0.7rem;
+  }
 }
 @media all and (max-width: 1024px){
   
 }
 @media all and (max-width: 760px){
-  
+  .visualtext {
+    font-size: 3.3rem;
+  }
+  .visualtext > span {
+    font-size: 2.6rem;
+  }
+  .animal-intro-text h4 {
+    font-size: 0.9rem;
+  }
+  .rightcontent {
+    font-size: 0.9rem;
+  }
+  .textbox div {
+    font-size: 0.8rem;
+  }
+  .textbox div ul {
+    font-size: 0.6rem;
+  }
 }
 @media all and (max-width: 480px){
   
