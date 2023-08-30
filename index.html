@@ -70,6 +70,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
     />
+    <!-- XEIcon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -157,19 +159,50 @@
       </header>
       <!-- 비주얼 -->
       <section class="visual clearfix" id="visual">
-        <div class="inner"></div>
+        <div class="inner">
+        </div>
       </section>
       <!-- 육지동물 소개 -->
       <section class="landanimal clearfix">
         <div class="land-gradient"></div>
-        <div class="inner">
-          <div id="banner">
-            <div class="banner_inner">
-              <div class="banner-text">
-                <h2>육지동물 소개</h2>
-                <p>아라리움의 특별한 육지동물을 소개합니다.</p>
+        <div class="backnamu" id="namu1"></div>
+        <div class="backnamu" id="namu2"></div>
+        <div class="inner">         
+          <div id="banner" class="container">
+            <div class="img-popup">
+              <div class="popup-inner">
+                <a href="#" class="close-btn">
+                  <i class="xi-close"></i>
+                </a>
+                <div class="popup-txt">
+                  <p>이미지 위에 마우스를 올려보세요. <br>
+                  동영상이 재생 됩니다.</p>
+                  <span class="blind">팝업창 닫기</span>
+                </div>
               </div>
-              <div class="banner_list">
+            </div>
+            <div class="banner_inner item-box" >
+              <!-- <div class="alpaka_gif" id="ag_1"><img src="images/ac.png" alt="움직이는알파카"></div> -->
+              <div class="alpaka_gif item-img" id="ag_2">
+                <a href="#">
+                <img src="images/ac.png" alt="움직이는알파카">
+              </a>
+              </div>
+
+              <div class="banner-text" 
+              data-aos="flip-up" 
+              data-aos-offset="200" 
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" >
+                <h2>육지친구들 소개</h2>
+                <p>아라리움의 특별한 육지친구들을 소개합니다.</p>
+              </div>
+              <div class="banner_list"  data-aos="fade-up" 
+              data-aos-offset="200" 
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" 
+                data-aos-delay="300"
+                >
                 <ul class="slide_list">
                   <li>
                     <span class="slide_dog"
@@ -191,7 +224,6 @@
                     </dl>
                     <div class="slide_hide_alpa" id="slide_hide"></div>
                   </li>
-
                   <li>
                     <span class="slide_pig"
                       ><img src="images/pig.png" alt=""
@@ -204,7 +236,7 @@
                   </li>
                   <li>
                     <span class="slide_rabbit"
-                      ><img src="images/rabbit.png" alt=""
+                      ><img src="images/rab.png" alt=""
                     /></span>
                     <dl>
                       <dt>토끼</dt>
@@ -255,7 +287,7 @@
                   </li>
                   <li>
                     <span class="slide_namu"
-                      ><img src="images/namu.png" alt=""
+                      ><img src="images/namunamu.png" alt=""
                     /></span>
                     <dl>
                       <dt>나무늘보</dt>
@@ -307,6 +339,7 @@
                 </ul>
               </div>
             </div>
+           
           </div>
         </div>
       </section>
