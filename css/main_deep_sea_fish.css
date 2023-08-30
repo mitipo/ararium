@@ -2,55 +2,112 @@
 .deepseafish {
   position: relative;
   height: 100vh;
-  background: url("../images/main4.jpg") no-repeat;
+  background: url("../images/main4_deepsea2_img.jpg") no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
 /* 마크 애니메이션 */
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0); /* 시작과 끝 위치 */
+@keyframes swimming1 {
+  0% {
+    transform: translateX(0);
   }
-  40% {
-    transform: translateX(-30px); /* 통통 튀는 중간 위치 */
+  45% {
+    transform: translateX(-400px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateX(400px);
+  }
+
+  95% {
+    transform: scaleX(-1) translateX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
   }
 }
-@keyframes bounce2 {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0); /* 시작과 끝 위치 */
+@keyframes swimming2 {
+  0% {
+    transform: translateX(0);
   }
-  40% {
-    transform: translateX(30px); /* 통통 튀는 중간 위치 */
+  45% {
+    transform: translateX(-120px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateX(120px);
+  }
+
+  95% {
+    transform: scaleX(-1) translateX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes swimming3 {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(130px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateX(-130px);
+  }
+
+  95% {
+    transform: scaleX(-1) translateX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes swimming4 {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(180px);
+  }
+
+  50% {
+    transform: scaleX(-1) translateX(-180px);
+  }
+
+  95% {
+    transform: scaleX(-1) translateX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
   }
 }
 
 /* 심해 타이틀 */
 .deepseafish-title {
   position: absolute;
-  top: 13%;
+  top: 15%;
   left: 1%;
   font-size: 70px;
   color: #fff;
   font-weight: 500;
   user-select: none;
   text-shadow: 1px 2px 3px rgb(56, 56, 56);
+  letter-spacing: -5.5px;
 }
 .deepseafish-sub-title {
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 1%;
   font-size: 18px;
   color: #ebeaea;
-  text-indent: 4px;
+  text-indent: 10px;
   user-select: none;
   text-shadow: 1px 2px 5px rgb(56, 56, 56);
 }
@@ -66,48 +123,47 @@
 .deepseafish-mark2 i,
 .deepseafish-mark3 i,
 .deepseafish-mark4 i {
-  color: #0f97e7;
+  color: rgba(0, 132, 255);
   transition: color 0.3s;
   text-shadow: 0px 2px 5px #026eac94;
 }
 .deepseafish-mark1 i {
   transform: scaleX(-1) !important;
-  font-size: 28px;
+  font-size: 37px;
 }
 .deepseafish-mark2 i {
-  font-size: 40px;
+  font-size: 47px;
   transform: scaleX(-1) !important;
 }
 .deepseafish-mark3 i {
-  font-size: 35px;
+  font-size: 43px;
 }
 .deepseafish-mark4 i {
-  font-size: 38px;
+  font-size: 45px;
 }
 .deepseafish-mark1 {
   position: absolute;
   top: 20%;
   left: 73%;
-  animation: bounce 4s infinite;
-  animation-delay: 0.5s;
+  animation: swimming1 18s infinite;
+  animation-delay: 1s;
   cursor: pointer;
-  transition: animation 2s ease-in-out;
+  /* transition: all 2s ease-in-out; */
 }
 .deepseafish-mark2 {
   position: absolute;
   top: 47%;
   left: 14%;
-  animation: bounce 4s infinite;
-  animation-delay: 2.5s;
+  animation: swimming2 13s infinite;
+  animation-delay: 3s;
   cursor: pointer;
   transition: animation 2s ease-in-out;
 }
 .deepseafish-mark3 {
   position: absolute;
-  top: 53%;
+  top: 58%;
   left: 45%;
-  animation: bounce2 4s infinite;
-  animation-delay: 2s;
+  animation: swimming3 13s infinite;
   cursor: pointer;
   transition: animation 2s ease-in-out;
 }
@@ -115,8 +171,8 @@
   position: absolute;
   top: 69%;
   left: 84%;
-  animation: bounce2 4s infinite;
-  animation-delay: 1.5s;
+  animation: swimming4 14s infinite;
+  animation-delay: 4s;
   cursor: pointer;
   transition: animation 2s ease-in-out;
   z-index: 1;
@@ -125,7 +181,7 @@
 .deepseafish-mark2 i:hover,
 .deepseafish-mark3 i:hover,
 .deepseafish-mark4 i:hover {
-  color: #78ceff !important;
+  color: rgb(57, 159, 255);
 }
 
 /* 마크를 눌렀을 때 나올 내용 */
@@ -138,7 +194,7 @@
   height: auto;
   color: #fff;
   background: rgba(0, 0, 0, 0.7);
-  padding: 3%;
+  padding: 1.5%;
   border-radius: 5px;
 }
 #deepseafish1,
@@ -148,6 +204,15 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+}
+.deepseafish-content-line {
+  border: 1px solid #ffffffab;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  float: right;
+  padding: 2.5%;
 }
 
 /* 내용 안의 사진 */
@@ -177,6 +242,7 @@
   padding-top: 10px;
   user-select: none;
   cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 내용 안의 글자 */
@@ -184,13 +250,12 @@
   width: 48%;
   max-height: 450px;
   padding-right: 2%;
-  font-size: 15px;
-  letter-spacing: 1px;
   user-select: none;
   float: left;
   overflow: auto;
   height: 100%;
   position: relative;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .deepseafish-content-txt::-webkit-scrollbar {
   width: 5px;
@@ -201,40 +266,61 @@
   border-radius: 5px;
 }
 .deepseafish-content-txt::-webkit-scrollbar-thumb {
-  background: #0f97e7;
+  background: rgba(0, 132, 255);
   border-radius: 5px;
 }
+
 /* 내용 제목 */
 .deepseafish-content-title h2 {
-  font-size: 30px;
-  margin-bottom: 5%;
+  font-size: 33px;
+  margin-bottom: 3%;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .deepseafish-content-title span {
-  font-size: 20px;
+  margin-left: 5px;
+  font-size: 23px;
+  font-family: "Noto Sans KR", sans-serif;
 }
+
 /* 내용 안의 리스트 */
 .deepseafish-content-txt ul li {
   margin-bottom: 2%;
-  line-height: 1.5;
 }
 .deepseafish-content-txt span {
-  margin-bottom: 0.5%;
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 0.5%;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
+.deepseafish-content-txt p {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
 /* 내용 닫기 버튼 */
 .deepseafish-content-close1,
 .deepseafish-content-close2,
 .deepseafish-content-close3,
 .deepseafish-content-close4 {
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 100;
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 2.5%;
+  right: 2.5%;
   cursor: pointer;
   z-index: 9999;
 }
+.deepseafish-content-close1 i:hover,
+.deepseafish-content-close2 i:hover,
+.deepseafish-content-close3 i:hover,
+.deepseafish-content-close4 i:hover {
+  color: rgba(0, 132, 255);
+}
+
 /* 내용 안의 큰 사진 닫기 버튼 */
 .deepseafish-content-close1-1,
 .deepseafish-content-close2-1,
@@ -242,10 +328,16 @@
 .deepseafish-content-close4-1 {
   font-size: 28px;
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 2.5%;
+  right: 2.5%;
   cursor: pointer;
   z-index: 9999;
+}
+.deepseafish-content-close1-1 i:hover,
+.deepseafish-content-close2-1 i:hover,
+.deepseafish-content-close3-1 i:hover,
+.deepseafish-content-close4-1 i:hover {
+  color: rgba(0, 132, 255);
 }
 
 /* 내용 안의 사진을 눌렀을 때 나올 큰 사진 */
@@ -297,7 +389,7 @@
 .deepseafish-img-big2::-webkit-scrollbar-thumb,
 .deepseafish-img-big3::-webkit-scrollbar-thumb,
 .deepseafish-img-big4::-webkit-scrollbar-thumb {
-  background: #0f97e7;
+  background: rgba(0, 132, 255);
   border-radius: 5px;
 }
 
