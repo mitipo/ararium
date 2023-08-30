@@ -16,28 +16,35 @@ $(document).ready(function () {
   // 점버튼(.dot) 클릭시 동물소개, 동물이미지 생성
   $(".dot p").on("click", function () {
     var targetIndex = $(this).index();
-    $(".ani1, .ani2, .ani3").hide(0); // 모든 동물 요소를 먼저 숨김
+    $(".ani1, .ani2, .ani3, .ani4").hide(0); // 모든 동물 요소를 먼저 숨김
     $(".marineanimal-ex").hide(0); // 모든 동물 설명을 먼저 숨김
 
     var marginLeftValue =
-      targetIndex === 0 ? "5%" : targetIndex === 1 ? "20%" : "-30%";
+    targetIndex === 0 ? "3%" : targetIndex === 1 ? "18%" : "-40%" ;
     $(".ani" + (targetIndex + 1))
-      .show(700)
-      .animate({ marginLeft: marginLeftValue }, 600);
-
+    .show(700)
+    .animate({ marginLeft: marginLeftValue }, 700);
+    
     $(".marineanimal-ex.0" + (targetIndex + 1))
-      .stop()
-      .fadeIn(1000);
+    .stop()
+    .fadeIn(1000);
+
+    var marginRightValue =
+    targetIndex === 0 ? "3%" : targetIndex === 1 ? "5%" : "8%" ;
+    $(".ani" + (targetIndex + 1))
+    .show(700)
+    .animate({ marginRight: marginRightValue }, 700);
   });
   $(".marineanimal-ex i.fa-xmark").on("click", function () {
-    $(".ani1, .ani2, .ani3").hide(0); // 모든 동물 요소를 숨김
+    $(".ani1, .ani2, .ani3, .ani4").hide(0); // 모든 동물 요소를 숨김
     $(".marineanimal-ex").hide(0); // 모든 동물 설명을 숨김
   });
-  $(".marineanimal").ripples({
-    resolution: 512,
-    dropRadius: 20,
-    perturbance: 0.04,
-  });
+  
+  // $(".marineanimal").ripples({
+  //   resolution: 512,
+  //   dropRadius: 20,
+  //   perturbance: 0.04,
+  // });
 });
 
 // 멀티미디어 리소스 로딩 완료 후 실행
@@ -61,7 +68,7 @@ window.addEventListener("load", function () {
   const itv = 500; // 물방울 생성 간격 || 단위 - ms
   const dur = 3000; // 물방울 속도 || 단위 - ms
   const byd = "100%"; // 물방울 올라가는 높이
-  const sArray = [4, 6, 8, 10, 12]; // 물방울 크기 || 단위 - px
+  const sArray = [50, 56, 58, 50, 52]; // 물방울 크기 || 단위 - px
 
   function _0x4eee() {
     const _0x185aca = [

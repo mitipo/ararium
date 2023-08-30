@@ -6,6 +6,22 @@
   background-position: bottom center;
   background-size: cover;
 }
+.marineanimal .inner {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.marineanimal::after {
+  position: relative;
+  display: block;
+  background: url("../images/main_marine_etc.png") no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.marineanimal .mar_etc img {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  z-index: 99999;
+}
 .marineanimal .marineanimal-box {
   position: relative;
   display: block;
@@ -13,23 +29,14 @@
   width: 100%;
   height: 100%;
 }
-
-/* .mar_etc {
-  width: 100%;
-  height: 100%;
-  background: url("../images/main_marine_etc.png") no-repeat right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 8000;
-  background-size:contain;
-} */
+/* 타이틀 */
 #bb-outer {
   display: block;
   position: absolute;
   top: 5%;
-  width: 60%;
-  padding: 10px 20px;height:fit-content;
+  width: 80%;
+  padding: 10px 20px;
+  height: fit-content;
 }
 #bb-outer .bubbles {
   display: inline-block;
@@ -41,18 +48,19 @@
   bottom: 20px;
   background: rgba(113, 186, 255, 0.7);
 }
-#bb-outer .bubbles h3 {
-  font-size: 82px;
-  font-weight: 900;
-  font-family: "EF_cucumbersalad";
+#bb-outer .bubbles h2 {
+  font-size: 70px;
+  font-weight: 500;
+  letter-spacing: -5.5px;
   text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-  color: #010d26;
+  color: #ffffff;
 }
-#bb-outer  p {
-  font-family: "EF_cucumbersalad";
+#bb-outer p {
+  /* font-family: "EF_cucumbersalad"; */
   padding-top: 30px;
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 /* 배경 물고기 이동 */
@@ -109,7 +117,18 @@
   left: 0px;
   transform: rotateZ(45deg);
 }
-
+.fishs li:nth-of-type(1),
+.fishs li:nth-of-type(4) {
+  background-color: aquamarine;
+}
+.fishs li:nth-of-type(6),
+.fishs li:nth-of-type(8) {
+  background-color: rgb(255, 242, 167);
+}
+.fishs li:nth-of-type(5),
+.fishs li:nth-of-type(7) {
+  background-color: rgb(93, 119, 175);
+}
 .bubbles {
   display: block;
   position: relative;
@@ -194,7 +213,7 @@
 /* ///전갱이/// */
 .marineanimal .marineanimal-box .ani2 {
   position: absolute;
-  top: 65%;
+  top: 70%;
   left: 0%;
   display: none;
   z-index: 9000;
@@ -204,17 +223,25 @@
 .marineanimal .marineanimal-box .ani3 {
   position: absolute;
   top: 45%;
-  left: 100%;
+  right: 15%;
   display: none;
   z-index: 9000;
   transform: translate(2s);
+}
+/* 흑가오리 */
+.marineanimal .marineanimal-box .ani4 {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  display: none;
+  z-index: 1500;
 }
 
 /* 바다동물 소개박스 */
 #marineanimal-x {
   display: block;
   color: #fff;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   padding-right: 10px;
   padding-top: 10px;
@@ -222,6 +249,9 @@
   float: right;
   z-index: 99999;
   position: relative;
+}
+#marineanimal-x:hover {
+  color: #0f97e7;
 }
 .marineanimal-ex {
   position: absolute;
@@ -232,10 +262,10 @@
   box-shadow: 0 20px 50px rgb(23, 32, 90);
   border: 2px solid #2a3cad;
   padding: 20px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 888;
+  z-index: 30;
   overflow: hidden;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -328,13 +358,22 @@
 .marineanimal-title h2 {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 33px;
   color: #fff;
   display: block;
   padding-right: 20px;
+  user-select: none;
+  padding-bottom: 5px;
 }
+/* .marineanimal-title h2::after{
+  background-color: #fff;
+  width:250px;
+  display: inline-block;
+  height: 2px;
+} */
 .marineanimal-title h2 span {
-  font-size: 0.7em;
+  font-size: 23px;
+  user-select: none;
 }
 .marineanimal-ex .marineanimal-in .marineanimal-txt {
   font-family: "Noto Sans KR", sans-serif;
@@ -345,18 +384,24 @@
 
   overflow: auto;
 }
+
 .marineanimal-ex .marineanimal-in .marineanimal-txt li {
   padding: 10px 0;
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
 }
 .marineanimal-ex .marineanimal-in .marineanimal-txt li > span {
   padding: 5px 0;
   display: block;
+  font-weight: 500;
 }
 .marineanimal-ex .marineanimal-in .marineanimal-txt li > p {
-  line-height: 1.2;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 200;
+  letter-spacing: 0.5px;
 }
+
 
 /* dot  */
 .marineanimal .marineanimal-box .dot {
@@ -365,11 +410,11 @@
   height: 100%;
   display: block;
 }
-
 /* dot 위치작업 */
 .marineanimal .marineanimal-box .dot_1,
 .marineanimal .marineanimal-box .dot_2,
-.marineanimal .marineanimal-box .dot_3 {
+.marineanimal .marineanimal-box .dot_3,
+.marineanimal .marineanimal-box .dot_4 {
   width: 20px;
   height: 20px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -392,13 +437,20 @@
   top: 50%;
   left: 80%;
 }
+.marineanimal .marineanimal-box .dot_4 {
+  position: absolute;
+  top: 20%;
+  right: 25%;
+}
 /* dot 효과 */
 .marineanimal .marineanimal-box .dot_1::before,
 .marineanimal .marineanimal-box .dot_1::after,
 .marineanimal .marineanimal-box .dot_2::before,
 .marineanimal .marineanimal-box .dot_2::after,
 .marineanimal .marineanimal-box .dot_3::before,
-.marineanimal .marineanimal-box .dot_3::after {
+.marineanimal .marineanimal-box .dot_3::after,
+.marineanimal .marineanimal-box .dot_4::before,
+.marineanimal .marineanimal-box .dot_4::after {
   content: "";
   position: absolute;
   background: #fff;
@@ -411,7 +463,8 @@
 }
 .marineanimal .marineanimal-box .dot_1::after,
 .marineanimal .marineanimal-box .dot_2::after,
-.marineanimal .marineanimal-box .dot_3::after {
+.marineanimal .marineanimal-box .dot_3::after,
+.marineanimal .marineanimal-box .dot_4::after {
   opacity: 0;
   animation: wave 3s 1.5s infinite linear;
 }
@@ -453,12 +506,117 @@ div.clickEffect {
 }
 
 @media all and (max-width: 1680px) {
+  .marineanimal-in {
+    z-index: 9999;
+  }
 }
+
 @media all and (max-width: 1280px) {
+  /* 스크롤바 생성 */
+  .marineanimal-txt ul::-webkit-scrollbar {
+    width: 5px;
+    padding: 0;
+  }
+  .marineanimal-txt ul::-webkit-scrollbar-track {
+    background: #999;
+    border-radius: 5px;
+  }
+  .marineanimal-txt ul::-webkit-scrollbar-thumb {
+    background: rgba(0, 132, 255);
+    border-radius: 5px;
+  }
+  .marineanimal .marineanimal-box .ani1 {
+    left: -15%;
+    transition: all 0.5s;
+  }
+  .marineanimal-ex {
+    width: 600px;
+    height: 600px;
+  }
+  .marineanimal-title {
+    padding-top: 220px;
+  }
+  .marineanimal-title h2 {
+    font-size: 30px;
+  }
+  .marineanimal-title h2 span {
+    font-size: 0.7em;
+  }
+  .marineanimal-ex .marineanimal-in .marineanimal-txt {
+    z-index: 2000;
+  }
+  .marineanimal-ex .marineanimal-in .marineanimal-txt ul {
+    margin-top: 30px;
+    height: 50%;
+    overflow-y: auto;
+  }
+  .marineanimal-ex .marineanimal-in .marineanimal-txt li {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+  /* 매너티 */
+  .marineanimal .marineanimal-box .ani1 {
+    top: 30%;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 300px;
+  }
+  /* 거북이 */
+  .marineanimal .marineanimal-box .ani3 {
+    top: 28%;
+    right: 25%;
+    /* transform: translateX(-10%); */
+    z-index: 1000;
+    transform: translate(2s);
+  }
+  /* ///전갱이 */
+  .marineanimal .marineanimal-box .ani2 {
+    left: 10%;
+    width: 500px;
+    height: 250px;
+  }
+  /* 흑가오리 */
+  .marineanimal .marineanimal-box .ani4 {
+    right: 25%;
+    transform: translateX(25%);
+    width: 300px;
+    height: 400px;
+    top: 25%;
+  }
+  #marineanimal-ex2 .marineanimal-title {
+    padding-top: 10%;
+  }
 }
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 760px) {
+  .marineanimal-ex {
+    width: 400px;
+    height: 600px;
+  }
+  .marineanimal .marineanimal-box .ani1 {
+    width: 300px;
+    height: 200px;
+  }
+  #bb-outer .bubbles h2 {
+    font-size: 60px;
+  }
+  #bb-outer p {
+    font-size: 16px;
+    padding-top: 20px;
+  }
 }
 @media all and (max-width: 480px) {
+  #bb-outer .bubbles h2 {
+    font-size: 50px;
+  }
+  #bb-outer p {
+    font-size: 13px;
+  }
+  .marineanimal .marineanimal-box .ani1 {
+    top: 35%;
+    width: 258px;
+    height: 163px;
+  }
 }
