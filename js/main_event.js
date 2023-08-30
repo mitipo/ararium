@@ -5,7 +5,7 @@ $(document).ready(function() {
 // 멀티미디어 리소스 로딩 완료 후 실행
 window.addEventListener("load", function() {
   // AOS.init();
-  new Swiper('.swiper', {    
+  new Swiper('.event .swiper', {    
     autoplay: {
       delay: 5000,
     },
