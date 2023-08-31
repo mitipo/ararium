@@ -21,13 +21,12 @@ li {
     rgba(255, 255, 255, 0.5)
   );
 }
-#banner {
-  width: 100%;
-  margin-top: 10%;
-}
+
 #banner {
   background: none;
   border: none;
+  width: 100%;
+  padding-top: 45px;
 }
 #banner .bx-wrapper {
   overflow: visible !important;
@@ -45,33 +44,29 @@ li {
 }
 #namu1 {
   right: 36%;
-  top: -35%;
+  top: -25%;
 }
 #namu2 {
   left: 36%;
-  top: -35%;
+  top: -25%;
   transform: scaleX(-1);
 }
 /* 알파카움직임 */
 .alpaka_gif {
   width: 100%;
   height: 100%;
+  right: 32px;
+  top: 200px;
   position: absolute;
+  width: 80px;
+  height: 100px;
+  background-color: none;
+  animation: box-ani 0.3s infinite linear forwards; /* 애니메이션 적용 */
+  z-index: 99999999999999;
 }
 .alpaka_gif img {
   width: 80px;
   height: 100px;
-}
-#ag_1 {
-  left: 20%;
-  top: 5%;
-}
-#ag_1 img {
-  transform: scaleX(-1);
-}
-#ag_2 {
-  left: 90%;
-  top: 5%;
 }
 @keyframes box-ani {
   from {
@@ -81,18 +76,11 @@ li {
     transform: translate(0px, 3px);
   }
 }
-.alpaka_gif {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 100px;
-  background-color: none;
-  animation: box-ani 0.3s infinite linear forwards; /* 애니메이션 적용 */
-}
+
 .item-img a {
   width: 100%;
   height: 100%;
+  z-index: 9999;
 }
 /* ----------- */
 .banner_inner {
@@ -341,9 +329,9 @@ li {
   clip: rect(1px, 1px, 1px, 1px);
 }
 .container .img-popup {
-  position: fixed;
+  position: absolute;
   top: 18%;
-  left: 67%;
+  right: 9%;
   width: 17rem;
   height: 6rem;
   background-color: rgba(250, 250, 250, 0.8);
@@ -438,13 +426,14 @@ li {
 }
 
 /* ---------- */
+
 /* 반응형 */
 @media all and (max-width: 1680px) {
   #ag_2 {
     left: 88%;
   }
   .container .img-popup {
-    position: fixed;
+    position: absolute;
     top: 15%;
     left: 68%;
     width: 15rem;
@@ -463,11 +452,11 @@ li {
 @media all and (max-width: 1280px) {
   #ag_2 {
     left: 82%;
-    top: 7%;
+    /* top: 22%; */
   }
 
   .container .img-popup {
-    position: fixed;
+    position: absolute;
     top: 10%;
     left: 73%;
     width: 15rem;
@@ -484,21 +473,15 @@ li {
   }
 }
 @media all and (max-width: 1024px) {
-  #ag_1 {
-    left: 10%;
-  }
   #ag_2 {
     left: 85%;
-    top: 10%;
+    top: 22%;
   }
-  .alpaka_gif img {
-    width: 60px;
-    height: 80px;
-  }
+
   .container .img-popup {
-    position: fixed;
-    top: 12%;
-    left: 79%;
+    position: absolute;
+    top: 9%;
+    left: 78%;
     width: 9rem;
     height: 5rem;
     background-color: rgba(250, 250, 250, 0.8);
@@ -521,7 +504,6 @@ li {
     /* margin-top: 2%; */
     text-align: center;
   }
-
   .container .img-popup .popup-inner .close-btn {
     display: flex;
     display: -webkit-flex;
@@ -539,24 +521,32 @@ li {
     color: #69745b;
     font-size: 18px;
   }
+  .ani-back img {
+    display: none;
+  }
+  .ani-back2 img {
+    margin: 0 auto;
+    margin-top: -50px;
+    display: block !important;
+  }
 }
 @media all and (max-width: 760px) {
-  .slide_list li img {
-    /* border-radius:%; */
-    /* border: 5px solid #ccc; */
-  }
-  #ag_1 {
-    left: 1%;
-    top: 8%;
-  }
   #ag_2 {
     left: 84%;
-    top: 12%;
+    top: 24%;
   }
+  .alpaka_gif img {
+    width: 60px;
+    height: 80px;
+  }
+  #contents2 {
+    top: 630px;
+  }
+
   .container .img-popup {
-    position: fixed;
+    position: absolute;
     top: 36%;
-    left: 76%;
+    left: 73%;
     width: 8rem;
     height: 4rem;
     background-color: rgba(250, 250, 250, 0.8);
@@ -596,6 +586,9 @@ li {
     color: #69745b;
     font-size: 18px;
   }
+  .ani-back img {
+    display: none;
+  }
 }
 @media all and (max-width: 748px) {
   .banner-text h2 {
@@ -614,7 +607,7 @@ li {
 }
 @media all and (max-width: 670px) {
   .container .img-popup {
-    position: fixed;
+    position: absolute;
     top: 36%;
     left: 76%;
     width: 8rem;
@@ -656,6 +649,15 @@ li {
     color: #69745b;
     font-size: 18px;
   }
+  .ani-back img {
+    display: none;
+  }
+  .ani-back2 img {
+    display: block;
+  }
+  .bx-controls-direction {
+    display: none;
+  }
 }
 @media all and (max-width: 480px) {
   .banner-text h2 {
@@ -671,6 +673,9 @@ li {
     /* font-weight: 600; */
     width: 100%;
   }
+  .ani-back img {
+    display: none;
+  }
 }
 @media all and (min-width: 200px) {
   .banner_list {
@@ -681,4 +686,135 @@ li {
   .banner-text {
     width: 100%;
   }
+}
+/* --------------자세히보기 팝업 */
+/*팝업창*/
+#popup {
+  display: none; /*숨기기*/
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.7);
+  /* margin: 0 auto; */
+  margin-top: -80px;
+}
+#popmenu {
+  position: absolute;
+  left: 10%;
+  top: 14%;
+  /* transform: translate(-50%, -50%); */
+  width: 80%;
+  height: 110%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  /* background: #181818; */
+}
+.popmenu-flex {
+  position: absolute;
+  /* margin: 0 auto; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popmenu h4 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+  width: 100px;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+  padding-top: 30px;
+  text-shadow: 3px 5px 3px #000;
+  color: #ffffff;
+}
+.popmenu-ani h4:hover {
+  color: #000;
+}
+
+#popmenu ul li {
+  font-size: 14px;
+  line-height: 25px;
+  width: 100px;
+  text-shadow: 1px 3px 1px #000;
+}
+.popmenu-ani {
+  height: 350px;
+  width: 300px;
+  display: flex;
+  /* border: 1px dashed #fff; */
+  align-items: center;
+  flex-direction: column;
+}
+.exit {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 33px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+}
+.ani-padding {
+  padding-top: 10px;
+}
+.exit:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* 팝업뒷배경 */
+.ani-back {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  border: 1px dotted #fff;
+}
+.ani-back img {
+  width: 300px;
+  height: 290px;
+  opacity: 20%;
+  margin-top: 20px;
+}
+.ani-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ani-back2 img {
+  width: 330px;
+  height: 418px;
+  opacity: 10%;
+  display: none;
+}
+/*본문내용*/
+#contents2 {
+  width: 170px;
+  height: 40px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  cursor: pointer;
+  /* display: block; */
+  position: absolute;
+  margin-top: -650px;
+  /* top: 0; */
+  left: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+#contents2:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
 }

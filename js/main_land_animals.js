@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function () { 
   var $slider;
 
   function buildSliderConfiguration() {
@@ -74,52 +74,70 @@ window.addEventListener("load", function () {
 // --------------------------
 // --------------------------
 // 이미지 클릭
-$(function(){
+$(function () {
   // 변수 선언
-  var imageButton = $('.item-box .item-img a');
-  var popup = $('.img-popup');
-  var closeButton = popup.find('> .popup-inner > .close-btn');
-  var htmlAndBody = $('html, body');
+  var imageButton = $(".item-box .item-img a");
+  var popup = $(".img-popup");
+  var closeButton = popup.find("> .popup-inner > .close-btn");
+  var htmlAndBody = $("html, body");
   var focusTarget;
 
   // 팝업 생성
-  imageButton.on('click', function(e){
+  imageButton.on("click", function (e) {
     e.preventDefault();
-    var popupImg = popup.find('> .popup-inner > img');
-    var image = $(this).find('> img');
-    var src = image.attr('src');
-    var alt = image.attr('alt');
+    var popupImg = popup.find("> .popup-inner > img");
+    var image = $(this).find("> img");
+    var src = image.attr("src");
+    var alt = image.attr("alt");
     focusTarget = $(this);
-    popupImg.attr('src', src).attr('alt', alt);
+    popupImg.attr("src", src).attr("alt", alt);
     createPopup();
   });
 
   // 팝업 제거
-  popup.on('click', function(){
+  popup.on("click", function () {
     removePopup();
   });
-  closeButton.on('click', function(e){
+  closeButton.on("click", function (e) {
     e.preventDefault();
     removePopup();
   });
 
   // 팝업창 검은배경과 닫기 버튼을 제외한 나머지 부분 클릭시 닫히지 않도록 하기
-  popup.find('> .popup-inner').on('click', function(e){
+  popup.find("> .popup-inner").on("click", function (e) {
     e.stopPropagation();
-  })
+  });
 
   // 팝업 생성 함수
-  function createPopup(){
-    popup.addClass('active');
-    htmlAndBody.css('overflow-y', 'hidden');
-    setTimeout(function(){
+  function createPopup() {
+    popup.addClass("active");
+    htmlAndBody.css("overflow-y", "visible");
+    setTimeout(function () {
       closeButton.focus();
     }, 50);
   }
   // 팝업 제거 함수
-  function removePopup(){
-    popup.removeClass('active');
+  function removePopup() {
+    popup.removeClass("active");
     focusTarget.focus();
-    htmlAndBody.css('overflow-y', 'visible');
+    htmlAndBody.css("overflow-y", "visible");
   }
-})
+});
+
+   // --------------------------------자세히보기 팝업-------
+  //<![CDATA[
+
+
+//]]>
+// --------------------------------
+$(function() {
+  $("#contents2").click(function () {
+    $("#popup").fadeIn();
+  });
+
+  $(".exit").click(function () {
+    $("#popup").fadeOut();
+  });
+});
+
+// jQuery 존재하는지 판단하여 없으면 스크립트 CDN 삽입
