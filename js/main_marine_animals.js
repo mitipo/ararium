@@ -18,33 +18,34 @@ $(document).ready(function () {
     var targetIndex = $(this).index();
     $(".ani1, .ani2, .ani3, .ani4").hide(0); // 모든 동물 요소를 먼저 숨김
     $(".marineanimal-ex").hide(0); // 모든 동물 설명을 먼저 숨김
-
-    var marginLeftValue =
-    targetIndex === 0 ? "3%" : targetIndex === 1 ? "18%" : "-40%" ;
-    $(".ani" + (targetIndex + 1))
-    .show(700)
-    .animate({ marginLeft: marginLeftValue }, 700);
     
+    var marginLeftValue =
+      targetIndex === 0 ? "3%" : targetIndex === 1 ? "15%" : "-40%";
+      if (targetIndex === 1) { // ani2의 경우 이미지 이동 속도를 늦추는 조건 추가
+        $(".ani" + (targetIndex + 1))
+          .show(700)
+          .animate({ marginLeft: marginLeftValue }, 1200); // 이미지 이동 속도를 늦춤
+      } else {
+        $(".ani" + (targetIndex + 1))
+          .show(700)
+          .animate({ marginLeft: marginLeftValue }, 700);
+      }
     $(".marineanimal-ex.0" + (targetIndex + 1))
-    .stop()
-    .fadeIn(1000);
+      .stop()
+      .fadeIn(1000);
 
     var marginRightValue =
-    targetIndex === 0 ? "3%" : targetIndex === 1 ? "5%" : "8%" ;
+      targetIndex === 0 ? "3%" : targetIndex === 1 ? "5%" : "8%";
     $(".ani" + (targetIndex + 1))
-    .show(700)
-    .animate({ marginRight: marginRightValue }, 700);
+      .show(700)
+      .animate({ marginRight: marginRightValue }, 700);
   });
   $(".marineanimal-ex i.fa-xmark").on("click", function () {
-    $(".ani1, .ani2, .ani3, .ani4").hide(0); // 모든 동물 요소를 숨김
+    $(".ani1, .ani2, .ani3, .ani4")
+      .hide(0)
+      .css({ marginLeft: 0, marginRight: 0 }); // 모든 동물 요소를 숨김
     $(".marineanimal-ex").hide(0); // 모든 동물 설명을 숨김
   });
-  
-  // $(".marineanimal").ripples({
-  //   resolution: 512,
-  //   dropRadius: 20,
-  //   perturbance: 0.04,
-  // });
 });
 
 // 멀티미디어 리소스 로딩 완료 후 실행
@@ -183,4 +184,24 @@ window.addEventListener("load", function () {
           }, dur);
       }, itv);
     });
+
+  // jelly 팝업창 둥둥떠다니는 효과
+  // 범위 랜덤 함수(소수점 2자리까지)
+  function random(min, max) {
+    // `.toFixed()`를 통해 반환된 문자 데이터를,
+    // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+  }
+
+  function floatingObject(selector, delay, size) {
+    // gsap.to(요소, 시간, 옵션)
+    gsap.to(selector, random(1.5, 2.5), {
+      y: size,
+      repeat: -1, // -1 무한반복
+      yoyo: true, // 애니메이션 되돌아오기(설정안할 시 끈킴)
+      ease: Power1.easeInOut, // 타이밍함수
+      delay: random(0, delay), // 지연시간
+    });
+  }
+  floatingObject(".jelly", 1, 15);
 });

@@ -63,6 +63,8 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
     <!-- swiper -->
     <link rel="stylesheet" href="js/swiper/swiper.min.css" />
     <script src="js/swiper/swiper.min.js"></script>
@@ -400,10 +402,13 @@
       <section class="sea">
         <!-- 바다동물 소개 -->
         <section class="marineanimal clearfix">
-                      <div class="mar_etc">
-              <!-- <img src="images/main_marine_etc.png" alt=""> -->
-            </div>
           <div class="inner">
+            <div class="jelly">
+              <img id="jellyimg" src="images/main_marine_animals_jelly.png" alt="팝업해파리">
+              <div class="jelly-popup">
+                <span>움직이는 파동을 클릭해보세요!</span>
+              </div>
+            </div>
             <div id="bb-outer"data-aos="fade-right">
               <div class="bubbles" >
                               <h2>바다동물 소개</h2>
@@ -476,7 +481,7 @@
                 <span></span>
                 <div class="marineanimal-in">
                 <div class="marineanimal-title">
-                  <h2>매너티&nbsp;<span>manatee</span></h2>
+                  <h2>매너티&nbsp;<span>Manatee</span></h2>
                 </div>
                 <div class="marineanimal-txt">
                   <ul>
@@ -513,7 +518,7 @@
                 <span></span>
                 <div class="marineanimal-in">
                 <div class="marineanimal-title">
-                  <h2>전갱이&nbsp;<span>horse mackerel</span></h2>
+                  <h2>전갱이&nbsp;<span>Horse mackerel</span></h2>
                 </div>
                 <div class="marineanimal-txt">
                   <ul>
@@ -600,11 +605,11 @@
                     </li>
                     <li>
                       <span>서식지&nbsp; :&nbsp;</span>
-                      <p>열대해역, 아열대해역</p>
+                      <p>한국 동해, 일본 동해연안지역의 수심 40-60m</p>
                     </li>
                     <li>
                       <span>크기&nbsp; :&nbsp;</span>
-                      <p>몸길이 1~1.2m</p>
+                      <p>몸길이 2m</p>
                     </li>
                     <li>
                       <span>특징&nbsp; :&nbsp;</span>
