@@ -1,5 +1,14 @@
 window.addEventListener("load", function () {
-  // 마크 불러오기
+  // 설명 모달창 이미지 불러오기
+  let blobfish = document.querySelector(".deepseafish-modal-img");
+
+  // 설명 모달창 내용 불러오기
+  let blobfishTxt = document.querySelector(".deepseafish-modal-txt");
+
+  // 설명 모달창 취소 버튼 불러오기
+  let blobfishCloseBtn = document.querySelector("#deepseafish-modal-close");
+
+  // 물고기 불러오기
   let mark1 = document.querySelector(".deepseafish-mark1");
   let mark2 = document.querySelector(".deepseafish-mark2");
   let mark3 = document.querySelector(".deepseafish-mark3");
@@ -64,6 +73,16 @@ window.addEventListener("load", function () {
       // 큰이미지 클릭 가능
       popActive = true;
     }
+  });
+
+  // 모달창 켜기
+  blobfish.addEventListener("click", function () {
+    blobfishTxt.style.opacity = 1;
+    blobfishTxt.style.visibility = "visible";
+  });
+  blobfishCloseBtn.addEventListener("click", function () {
+    blobfishTxt.style.opacity = 0;
+    blobfishTxt.style.visibility = "hidden";
   });
 
   // 마크를 눌렀을 때 컨텐츠 보이게 하기
