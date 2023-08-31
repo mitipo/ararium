@@ -7,7 +7,7 @@
   background-size: cover;
 }
 
-/* 마크 애니메이션 */
+/* 물고기 애니메이션 */
 @keyframes swimming1 {
   0% {
     transform: translateX(0);
@@ -88,6 +88,65 @@
     transform: scaleX(1);
   }
 }
+/* 블롭피쉬 모달창 애니메이션 */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(16px);
+  }
+}
+
+/* 심해 모달창 */
+.deepseafish-modal-img {
+  background: url("../images/Blobfish.png") no-repeat center;
+  position: absolute;
+  top: 12%;
+  right: 1%;
+  width: 120px;
+  height: 120px;
+  z-index: 99;
+  background-size: cover;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+.deepseafish-modal-txt {
+  width: 165px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 22%;
+  right: 7%;
+  z-index: 999;
+  user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.deepseafish-modal-txt p {
+  width: 110px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.4;
+  color: #fff;
+  font-weight: 500;
+  height: auto;
+  margin-left: 5px;
+}
+.deepseafish-modal-txt i {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 63px;
+  right: 15px;
+}
+.deepseafish-modal-txt i:hover {
+  color: rgb(57, 159, 255);
+}
 
 /* 심해 타이틀 */
 .deepseafish-title {
@@ -113,37 +172,34 @@
 }
 
 /* 마크 */
-/* .deepseafish .deepseafish-mark1 img,
-.deepseafish .deepseafish-mark2 img,
-.deepseafish .deepseafish-mark3 img,
-.deepseafish .deepseafish-mark4 img {
-  width: 55%;
-} */
 .deepseafish-mark1 i,
 .deepseafish-mark2 i,
 .deepseafish-mark3 i,
 .deepseafish-mark4 i {
-  color: rgba(0, 132, 255);
   transition: color 0.3s;
   text-shadow: 0px 2px 5px #026eac94;
 }
 .deepseafish-mark1 i {
+  color: rgb(0, 112, 218);
   transform: scaleX(-1) !important;
   font-size: 37px;
 }
 .deepseafish-mark2 i {
+  color: rgb(22, 141, 253);
   font-size: 47px;
   transform: scaleX(-1) !important;
 }
 .deepseafish-mark3 i {
+  color: rgb(53, 157, 255);
   font-size: 43px;
 }
 .deepseafish-mark4 i {
+  color: rgb(0, 132, 255);
   font-size: 45px;
 }
 .deepseafish-mark1 {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 73%;
   animation: swimming1 18s infinite;
   animation-delay: 1s;
@@ -152,7 +208,7 @@
 }
 .deepseafish-mark2 {
   position: absolute;
-  top: 47%;
+  top: 57%;
   left: 14%;
   animation: swimming2 13s infinite;
   animation-delay: 3s;
@@ -161,7 +217,7 @@
 }
 .deepseafish-mark3 {
   position: absolute;
-  top: 58%;
+  top: 68%;
   left: 45%;
   animation: swimming3 13s infinite;
   cursor: pointer;
@@ -169,7 +225,7 @@
 }
 .deepseafish-mark4 {
   position: absolute;
-  top: 69%;
+  top: 79%;
   left: 84%;
   animation: swimming4 14s infinite;
   animation-delay: 4s;
@@ -181,7 +237,7 @@
 .deepseafish-mark2 i:hover,
 .deepseafish-mark3 i:hover,
 .deepseafish-mark4 i:hover {
-  color: rgb(57, 159, 255);
+  color: rgb(248, 252, 255);
 }
 
 /* 마크를 눌렀을 때 나올 내용 */
@@ -193,7 +249,7 @@
   width: 60%;
   height: auto;
   color: #fff;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   padding: 1.5%;
   border-radius: 5px;
 }
@@ -229,7 +285,15 @@
   width: 44%;
   height: 100%;
   float: left;
-  margin-right: 5%;
+  margin-right: 4%;
+}
+.deepseafish-img1 {
+}
+.deepseafish-img2 {
+}
+.deepseafish-img3 {
+}
+.deepseafish-img4 {
 }
 
 /* 사진밑 span */
@@ -247,7 +311,7 @@
 
 /* 내용 안의 글자 */
 .deepseafish-content-txt {
-  width: 48%;
+  width: 50%;
   max-height: 450px;
   padding-right: 2%;
   user-select: none;
@@ -280,6 +344,7 @@
 .deepseafish-content-title span {
   margin-left: 5px;
   font-size: 23px;
+  word-break: normal;
   font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -288,6 +353,7 @@
   margin-bottom: 2%;
 }
 .deepseafish-content-txt span {
+  width: auto;
   display: block;
   font-size: 18px;
   font-weight: 500;
@@ -411,13 +477,25 @@
     left: 5%;
   }
 }
+@media all and (max-width: 1235px) and (min-width: 831px) {
+  .deepseafish-content-title span {
+    display: block;
+    margin-top: 1.5%;
+  }
+}
 @media all and (max-width: 1024px) {
+  .deepseafish-modal-txt p {
+    font-size: 16px;
+  }
+  .deepseafish-modal-txt i {
+    font-size: 20px;
+  }
 }
 @media all and (max-width: 830px) {
   .deepseafish-img {
     width: 100%;
     float: left;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
   #deepseafish1 .deepseafish-content-txt {
     max-height: 180px;
@@ -428,21 +506,23 @@
   .deepseafish-content-txt {
     width: 100%;
     max-height: 200px;
-    font-size: 14px;
-    letter-spacing: 1px;
     user-select: none;
     float: left;
     overflow: auto;
     height: 100%;
   }
+  .deepseafish-content-txt p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
   .deepseafish-content-txt span {
     margin-bottom: 0.5%;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     margin-right: 0.5%;
   }
   .deepseafish-content-title h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .deepseafish-content-title span {
     font-size: 18px;
@@ -459,7 +539,7 @@
 }
 @media all and (max-width: 748px) {
   .deepseafish-title {
-    font-size: 60px;
+    font-size: 50px;
   }
   .deepseafish-sub-title {
     font-size: 16px;
@@ -468,20 +548,18 @@
 }
 @media all and (max-width: 550px) {
   .deepseafish-mark1 {
-    top: 29%;
     left: 73%;
   }
 }
 @media all and (max-width: 480px) {
   .deepseafish-title {
-    font-size: 50px;
+    font-size: 45px;
   }
   .deepseafish-sub-title {
-    font-size: 13px;
-    top: 20%;
+    font-size: 14px;
+    top: 21%;
   }
   .deepseafish-mark1 {
-    top: 29%;
     left: 73%;
   }
   .deepseafish-mark2 {
