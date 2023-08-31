@@ -17,11 +17,16 @@
   width: 60px;
   height: 100px;
   position: fixed;
-  bottom: 270px;
+  bottom: 150px;
   right: 0px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 700;
-  background-color: rgba(0, 132, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-right: none;
+}
+.fixedmenu a.active {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .fixedmenu a i {
   font-size: 1.5rem;

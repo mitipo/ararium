@@ -9,6 +9,7 @@
 .inner {
   max-width: 1200px;
 }
+/* 티켓 예매 타이틀 */
 .ticketing-title {
   width: 100%;
   display: flex;
@@ -20,6 +21,7 @@
   text-align: center;
   border-bottom: 3px solid #777;
 }
+/* 방문일자/인원선택 */
 .visit {
   width: 100%;
   display: flex;
@@ -31,6 +33,7 @@
   text-align: left;
   font-weight: 700;
 }
+/* 방문일자 선택 */
 .date-choice {
   width: 100%;
   display: flex;
@@ -73,6 +76,7 @@
 .date .sun a {
   color: #ff0015;
 }
+/* 사람 인원 수 선택 */
 .people-choice {
   border-bottom: 10px solid #777;
 }
@@ -96,7 +100,7 @@
   font-size: 0.9rem;
 }
 .people-choice .inner > div .left .desc {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 .people-choice .inner > div .left .desc {
   padding-top: 10px;
@@ -106,16 +110,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* padding-left: 20px; */
 }
 .people-choice .inner > div .right .number {
   width: 20px;
   padding: 0px 20px;
   text-align: end;
+  font-size: 1.1em;
 }
 .people-choice .inner > div .right .btn {
   display: flex;
   text-align: center;
+  margin-left: 5px;
 }
 .people-choice .inner > div .right button {
   display: flex;
@@ -125,20 +130,22 @@
   height: 25px;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: #333;
   font-weight: 700;
-  background-color: rgb(0, 132, 255);
+  border: 1px solid #333;
 }
+/* 혜택 */
 .benefit {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   font-weight: 700;
 }
+/* 혜택 탭 버튼 */
 .tab-btn {
   border-bottom: 1px solid #ccc;
   background-color: #0d0d26;
@@ -158,10 +165,12 @@
 .tab-btn > ul > li.active {
   text-decoration: underline;
 }
+/* 이달의 혜택 */
 .month-benefit {
   display: flex;
   flex-direction: column;
   padding: 60px 0px;
+  font-size: 1.1em;
 }
 .month-benefit > li:first-child {
   display: flex;
@@ -219,6 +228,15 @@
   height: 155px;
   background-color: black;
 }
+.img01 {
+  background: url("../images/ararium-night01.jpg") center;
+  background-size: cover;
+}
+.img02 {
+  background: url("../images/ararium-online01.png") center;
+  background-size: cover;
+}
+/* 예매하기 버튼 */
 .ticketing-btn {
   text-align: center;
   float: right;
@@ -230,6 +248,7 @@
   color: #fff;
   font-weight: 700;
 }
+/* 제휴카드/포인트(혜택이 없는 탭 메뉴) */
 .no-benefit {
   text-align: center;
   padding: 200px 0px;
@@ -241,6 +260,7 @@
 
 }
 @media all and (max-width: 1024px){
+  
 }
 @media all and (max-width: 760px){
   .people-choice .inner {

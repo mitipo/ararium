@@ -2,28 +2,32 @@
 .visual {
   position: relative;
   height: 100vh;
-  background: url("../images/main_gif.gif") no-repeat;
+  background: url("../images/13.png") no-repeat;
   background-position: center center;
   background-size: cover;
 }
+/* 왼쪽 컨텐츠 */
 .leftcontent {
   position: absolute;
-  top: 20%;
+  top: 19%;
   left: 25px;
   display: flex;
   flex-direction: column;
 }
+/* 문구 */
 .visualtext {
   font-size: 3.8rem;
   font-weight: 900;
-  color: #fff;
+  color: rgba(253, 253, 253, 0.925);
   line-height: 1.4;
-  margin-bottom: 270px;
+  margin-bottom: 240px;
+  user-select: none;
 }
 .visualtext > span {
   display: block;
   font-size: 3rem;
 }
+/* 동물 소개 */
 .animalintro {
   display: flex;
   justify-content: left;
@@ -36,38 +40,55 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: rgb(0, 132, 255);
+  background-color: rgba(235, 235, 235, 0.4);
   border: none;
   margin-right: 30px;
   font-weight: 700;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
+}
+.animalintro .gobtn .gobtn-innercircle {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.95);
 }
 .animal-intro-text h4 {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 13px;
 }
 .animal-intro-text p {
-  color: #cacaca;
+  color: rgb(240, 240, 240);
   font-size: 0.75rem;
 }
+/* 오른쪽 컨텐츠 */
 .rightcontent {
-  width: 380px;
+  width: 270px;
+  height: 100px;
   position: absolute;
   top: 42%;
   right: 25px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.2rem;
   text-align: right;
   font-weight: 700;
 }
+/* 아라리움 뉴스 */
+.rightcontent h4 {
+  text-align: left;
+}
 .rightcontent p {
+  height: 80px;
   font-size: 0.75rem;
   line-height: 1.65;
   padding: 10px 0;
-  color: #cacaca;
+  color: rgb(240, 240, 240);
   font-weight: 500;
+  text-align: left;
 }
 .swiper {
   width: 100%;
@@ -81,39 +102,6 @@
   height: 30px;
   display: inline-block;
   cursor: pointer;
-}
-.textbox {
-  margin-top: 230px;
-  display: flex;
-  justify-content: end;
-}
-.textbox div {
-  padding: 9px;
-  font-size: 1rem;
-}
-.textbox div .datetext {
-  margin-bottom: 5px;
-}
-.textbox div ul {
-  width: 100%;
-  font-size: 0.8rem;
-  text-align: left;
-  font-weight: 500;
-}
-.textbox div ul li {
-  list-style: disc;
-  list-style-position : inside;
-  padding: 5px 0px;
-}
-.textbox1 {
-  width: 170px;
-  height: 170px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.textbox2 {
-  width: 170px;
-  height: 170px;
-  background-color: rgba(0, 132, 255, 0.75);
 }
 @media all and (max-width: 1680px){
   
@@ -131,12 +119,12 @@
   .rightcontent {
     font-size: 1.1rem;
   }
-  .textbox div {
+  /* .textbox div {
     font-size: 0.9rem;
   }
   .textbox div ul {
     font-size: 0.7rem;
-  }
+  } */
 }
 @media all and (max-width: 1024px){
   
@@ -154,13 +142,12 @@
   .rightcontent {
     font-size: 0.9rem;
   }
-  .textbox div {
-    font-size: 0.8rem;
-  }
-  .textbox div ul {
-    font-size: 0.6rem;
-  }
 }
 @media all and (max-width: 480px){
-  
+  .visualtext {
+    font-size: 3rem;
+  }
+  .visualtext > span {
+    font-size: 2.3rem;
+  }
 }

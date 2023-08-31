@@ -88,6 +88,7 @@ window.addEventListener("load", function() {
 
         if(result === true) {
           alert(`예약이 완료되었습니다.`);
+          location.href = 'index.html';
         }
         else {
           alert(`예약이 취소되었습니다.`);
