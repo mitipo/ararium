@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   position: fixed;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   height: 70px;
   z-index: 99999;
 }
@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
 }
+/* 네비게이션바 */
 .nav_bar {
   width: 100%;
   position: relative;
@@ -25,9 +26,11 @@
   align-items: center;
   height: 100%;
 }
+/* 로고 */
 .logo img {
   width: 152px;
 }
+/* 메뉴 */
 .gnb {
   position: relative;
   display: flex;
@@ -51,6 +54,7 @@
   color: #0f97e7;
   font-weight: 700;
 }
+/* 서브메뉴 */
 .submenu {
   position: absolute;
   top: 70px;
@@ -111,7 +115,6 @@
   }
   .nav_bar {
     width: 100%;
-    /* align-items: flex-start; */
     padding: 8px 0px;
     position: relative;
   }
