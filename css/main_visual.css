@@ -2,7 +2,7 @@
 .visual {
   position: relative;
   height: 100vh;
-  background: url("../images/13.png") no-repeat;
+  background: url("../images/17.png") no-repeat;
   background-position: center center;
   background-size: cover;
 }
@@ -22,6 +22,7 @@
   line-height: 1.4;
   margin-bottom: 240px;
   user-select: none;
+  text-shadow: 1px 1px 1px #333;
 }
 .visualtext > span {
   display: block;
@@ -60,10 +61,13 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 13px;
+  text-shadow: 1px 1px 1px #333;
 }
 .animal-intro-text p {
-  color: rgb(240, 240, 240);
+  color: #f0f0f0;
   font-size: 0.75rem;
+  text-shadow: 1px 1px 1px #333;
+  font-weight: 500;
 }
 /* 오른쪽 컨텐츠 */
 .rightcontent {
@@ -80,15 +84,17 @@
 /* 아라리움 뉴스 */
 .rightcontent h4 {
   text-align: left;
+  text-shadow: 1px 1px 1px #333;
 }
 .rightcontent p {
   height: 80px;
   font-size: 0.75rem;
   line-height: 1.65;
   padding: 10px 0;
-  color: rgb(240, 240, 240);
+  color: #f0f0f0;
   font-weight: 500;
   text-align: left;
+  text-shadow: 1px 1px 1px #333;
 }
 .swiper {
   width: 100%;
@@ -102,6 +108,7 @@
   height: 30px;
   display: inline-block;
   cursor: pointer;
+  text-shadow: 1px 1px 1px #333;
 }
 @media all and (max-width: 1680px){
   
@@ -119,12 +126,6 @@
   .rightcontent {
     font-size: 1.1rem;
   }
-  /* .textbox div {
-    font-size: 0.9rem;
-  }
-  .textbox div ul {
-    font-size: 0.7rem;
-  } */
 }
 @media all and (max-width: 1024px){
   

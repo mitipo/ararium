@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
   // AOS.init();
   new Swiper('.event .swiper', {    
     autoplay: {
-      delay: 5000,
+      delay: 3000,
     },
     loop: true,
     slidesPerView: 1,
