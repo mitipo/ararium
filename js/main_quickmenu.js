@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
   $(window).scroll(function(){
-    var sec3Top = $(".marineanimal").offset().top;
+    var sec3Top = $(".sea").offset().top;
     if($(this).scrollTop() > sec3Top){
       $('.fixedmenu a').addClass("active");
     }else{

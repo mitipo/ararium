@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-radius: 5px; */
   width: 60px;
   height: 100px;
   position: fixed;
@@ -45,8 +44,9 @@
   
 }
 @media all and (max-width: 760px){
-  
+  .fixedmenu a {
+    bottom: 180px;
+  }
 }
 @media all and (max-width: 480px){
-  
 }
