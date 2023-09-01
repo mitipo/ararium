@@ -1,7 +1,6 @@
 /* 육지동물 소개 */
 .landanimal {
   position: relative;
-
   width: 100%;
   height: 100vh;
   /* background: beige; */
@@ -18,7 +17,7 @@ li {
   height: 100%;
   background: linear-gradient(
     rgba(255, 255, 255, 1.2),
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.8)
   );
 }
 
@@ -40,7 +39,7 @@ li {
   background: url("../images/leafpng.png") no-repeat center;
   position: absolute;
   display: block;
-  opacity: 30%;
+  opacity: 8%;
 }
 #namu1 {
   right: 36%;
@@ -56,13 +55,13 @@ li {
   width: 100%;
   height: 100%;
   right: 32px;
-  top: 200px;
+  top: 190px;
   position: absolute;
   width: 80px;
   height: 100px;
   background-color: none;
   animation: box-ani 0.3s infinite linear forwards; /* 애니메이션 적용 */
-  z-index: 99999999999999;
+  z-index: 999;
 }
 .alpaka_gif img {
   width: 80px;
@@ -254,7 +253,7 @@ li {
 }
 .slide_list li:hover dl {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .slide_list li span {
   display: block;
@@ -271,7 +270,7 @@ li {
   max-height: 100%;
 }
 .slide_list li dl {
-  background-color: rgba(230, 230, 230, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   color: #fff;
   padding: 25px;
   height: 100px;
@@ -339,7 +338,7 @@ li {
   border: 2px double #aab898;
   opacity: 0;
   transition: all 0.5s;
-  z-index: 99999;
+  z-index: 9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,18 +442,38 @@ li {
     border: 2px double #aab898;
     opacity: 0;
     transition: all 0.5s;
-    z-index: 99999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  #contents2 {
+    right: 50%;
+  }
 }
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1650px) {
+  #contents2 {
+    right: 60%;
+  }
+}
+@media all and (max-width: 1610px) {
+  #contents2 {
+    margin-left: 10%;
+  }
+}
+@media all and (max-width: 1450px) {
+  #contents2 {
+    margin-left: 5%;
+  }
+}
+@media all and (max-width: 1292px) {
   #ag_2 {
     left: 82%;
     /* top: 22%; */
   }
-
+  #contents2 {
+    margin-left: 10%;
+  }
   .container .img-popup {
     position: absolute;
     top: 10%;
@@ -466,7 +485,7 @@ li {
     border: 2px double #aab898;
     opacity: 0;
     transition: all 0.5s;
-    z-index: 99999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,6 +495,9 @@ li {
   #ag_2 {
     left: 85%;
     top: 22%;
+  }
+  #contents2 {
+    margin-left: 2%;
   }
 
   .container .img-popup {
@@ -489,7 +511,7 @@ li {
     border: 2px double #aab898;
     opacity: 0;
     transition: all 0.5s;
-    z-index: 99999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,13 +543,42 @@ li {
     color: #69745b;
     font-size: 18px;
   }
-  .ani-back img {
-    display: none;
+  #contents2 {
+    left: 200px;
   }
-  .ani-back2 img {
-    margin: 0 auto;
-    margin-top: -50px;
-    display: block !important;
+}
+@media all and (max-width: 1575px) {
+  #contents2 {
+    right: 85%;
+  }
+  .alpaka_gif img {
+    margin-right: 100px;
+  }
+}
+@media all and (max-width: 1480px) {
+  #contents2 {
+    left: 80%;
+  }
+}
+@media all and (max-width: 1297px) {
+  #contents2 {
+    margin-left: 13%;
+  }
+}
+@media all and (max-width: 1070px) {
+  #contents2 {
+    margin-left: 2%;
+  }
+}
+@media all and (max-width: 820px) {
+  #contents2 {
+    margin-left: 12%;
+    top: 105%;
+  }
+}
+@media all and (max-width: 795px) {
+  #contents2 {
+    margin-left: 12%;
   }
 }
 @media all and (max-width: 760px) {
@@ -535,14 +586,14 @@ li {
     left: 84%;
     top: 24%;
   }
+  #contents2 {
+    margin-left: 22%;
+    top: 105%;
+  }
   .alpaka_gif img {
     width: 60px;
     height: 80px;
   }
-  #contents2 {
-    top: 630px;
-  }
-
   .container .img-popup {
     position: absolute;
     top: 36%;
@@ -554,7 +605,7 @@ li {
     border: 2px double #aab898;
     opacity: 0;
     transition: all 0.5s;
-    z-index: 99999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -586,9 +637,6 @@ li {
     color: #69745b;
     font-size: 18px;
   }
-  .ani-back img {
-    display: none;
-  }
 }
 @media all and (max-width: 748px) {
   .banner-text h2 {
@@ -609,7 +657,7 @@ li {
   .container .img-popup {
     position: absolute;
     top: 36%;
-    left: 76%;
+    left: 70%;
     width: 8rem;
     height: 4rem;
     background-color: rgba(250, 250, 250, 0.8);
@@ -617,7 +665,7 @@ li {
     border: 2px double #aab898;
     opacity: 0;
     transition: all 0.5s;
-    z-index: 99999;
+    z-index: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -649,14 +697,15 @@ li {
     color: #69745b;
     font-size: 18px;
   }
-  .ani-back img {
-    display: none;
-  }
-  .ani-back2 img {
-    display: block;
-  }
   .bx-controls-direction {
     display: none;
+  }
+}
+@media all and (max-width: 550px) {
+  #popup {
+    width: 550px;
+    height: 100%;
+    position: fixed;
   }
 }
 @media all and (max-width: 480px) {
@@ -673,8 +722,13 @@ li {
     /* font-weight: 600; */
     width: 100%;
   }
-  .ani-back img {
-    display: none;
+  #popup {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.85);
+    /* margin: 0 auto; */
+    margin-top: -80px;
   }
 }
 @media all and (min-width: 200px) {
@@ -686,6 +740,15 @@ li {
   .banner-text {
     width: 100%;
   }
+  #popup {
+    display: none; /*숨기기*/
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.85);
+    /* margin: 0 auto; */
+    margin-top: -80px;
+  }
 }
 /* --------------자세히보기 팝업 */
 /*팝업창*/
@@ -694,7 +757,7 @@ li {
   position: absolute;
   width: 100%;
   height: 80%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   /* margin: 0 auto; */
   margin-top: -80px;
 }
@@ -714,6 +777,7 @@ li {
   position: absolute;
   /* margin: 0 auto; */
   width: 100%;
+  height: 330px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -722,9 +786,9 @@ li {
   font-size: 25px;
   text-align: center;
   font-weight: 600;
-  width: 100px;
+  width: 100%;
   padding: 10px;
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */
   padding-top: 30px;
   text-shadow: 3px 5px 3px #000;
   color: #ffffff;
@@ -736,16 +800,30 @@ li {
 #popmenu ul li {
   font-size: 14px;
   line-height: 25px;
-  width: 100px;
+  width: 100%;
   text-shadow: 1px 3px 1px #000;
 }
 .popmenu-ani {
-  height: 350px;
-  width: 300px;
+  height: 310px;
+  width: 320px;
   display: flex;
-  /* border: 1px dashed #fff; */
   align-items: center;
   flex-direction: column;
+  margin-top: 70px;
+  /* border: 1px dotted #fff; */
+}
+.border-box {
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  z-index: 999999;
+}
+#popmenu-ani-2 {
+  border-right: 1px dotted #fff;
+  border-left: 1px dotted #fff;
+}
+#popmenu-ani-3 {
+  border-right: 1px dotted #fff;
 }
 .exit {
   position: absolute;
@@ -773,13 +851,18 @@ li {
   position: absolute;
   width: 25%;
   height: 100%;
-  border: 1px dotted #fff;
+  margin-top: -40px;
 }
+/* #ani-back-border {
+  border-right: 0.5px dotted #fff;
+  border-left: 0.5px dotted #fff;
+}
+#ani-back-border2 {
+  border-right: 0.5px dotted #fff;
+} */
 .ani-back img {
-  width: 300px;
-  height: 290px;
-  opacity: 20%;
-  margin-top: 20px;
+  width: 50px;
+  height: 50px;
 }
 .ani-back2 {
   position: absolute;
@@ -799,7 +882,7 @@ li {
   text-align: center;
   line-height: 50px;
   color: #fff;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   letter-spacing: 0.5px;
   font-weight: 500;
   cursor: pointer;
@@ -814,7 +897,8 @@ li {
   border-radius: 50px;
 }
 #contents2:hover {
-  color: #000;
+  color: #333;
   background: rgba(255, 255, 255, 0.7);
   font-weight: 600;
+  border: 2px dotted #333;
 }
