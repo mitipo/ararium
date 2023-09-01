@@ -27,11 +27,35 @@
 }
 .event .swiper-slide {
   width: 100%;
-  position: relative;
   cursor: pointer;
 }
-.event .swiper-slide:hover {
-  filter: brightness(0.5);
+.eventtext {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 132, 255);
+  color: #fff;
+  z-index: 99999;
+  text-align: center;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+}
+.event .swiper-slide:hover img {
+  filter: brightness(0.4);
+  z-index: 99;
+  transition: all 0.3s;
+}
+.event .swiper-slide:hover .eventtext {
+  display: flex;
+  z-index: 99999;
+  transition: all 0.3s;
 }
 @media all and (max-width: 1680px){
   

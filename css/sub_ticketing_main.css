@@ -93,7 +93,7 @@
 }
 .people-choice .inner > div .left span {
   display: block;
-  min-width: 90px;
+  min-width: 100px;
 }
 .people-choice .inner > div .left .kind {
   font-weight: 700;
@@ -229,11 +229,11 @@
   background-color: black;
 }
 .img01 {
-  background: url("../images/ararium-night01.jpg") center;
+  background: url("../images/ararium_night.jpg") center;
   background-size: cover;
 }
 .img02 {
-  background: url("../images/ararium-online01.png") center;
+  background: url("../images/ararium_online.jpg") center;
   background-size: cover;
 }
 /* 예매하기 버튼 */
