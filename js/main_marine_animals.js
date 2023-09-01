@@ -12,6 +12,18 @@ $(document).ready(function () {
       ? Math.round(randVal)
       : randVal.toFixed(floatVal);
   }
+  // 배경 해파리 이동
+  $(".jellyfish > li").each(function () {
+    $(this).css({
+      top: random(0, 400),
+    });
+  });
+  function random(minVal, maxVal, floatVal) {
+    var randVal = minVal + Math.random() * (maxVal - minVal);
+    return typeof floatVal == "undefined"
+      ? Math.round(randVal)
+      : randVal.toFixed(floatVal);
+  }
 
   // 점버튼(.dot) 클릭시 동물소개, 동물이미지 생성
   $(".dot p").on("click", function () {
