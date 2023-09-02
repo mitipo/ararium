@@ -4,14 +4,12 @@ $(document).ready(function() {
 });
 // 멀티미디어 리소스 로딩 완료 후 실행
 window.addEventListener("load", function() {
-  // AOS.init();
-  new Swiper('.rightcontent .swiper', {    
+  new Swiper('.animalintro .swiper', {    
     autoplay: {
       delay: 5000,
     },
     loop: true,
     slidesPerView: 1,
-    // spaceBetween: 10,
     autoHeight: true,
     pagination: {
       el: '.promotion .swiper-pagination',
@@ -19,8 +17,8 @@ window.addEventListener("load", function() {
     },
     
     navigation: {
-      prevEl: '.rightcontent .fa-chevron-left',
-      nextEl: '.rightcontent .fa-chevron-right',
+      prevEl: '.animalintro .fa-chevron-left',
+      nextEl: '.animalintro .fa-chevron-right',
     },
   });
 });
