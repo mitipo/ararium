@@ -1,13 +1,10 @@
 window.addEventListener("load", function () {
   var $slider;
-
   function buildSliderConfiguration() {
     var deviceWidth = $(window).width();
-
     /* 반응형으로 설정할 옵션 정의 */
     var slideNum;
     var slideMargin;
-
     /* 화면 사이즈별 슬라이드 갯수, 마진 설정, 기타 옵션도 설정 가능 */
     if (deviceWidth < 480) {
       slideNum = 1;
@@ -29,7 +26,6 @@ window.addEventListener("load", function () {
       slideNum = 5;
       slideMargin = 30;
     }
-
     return {
       slideWidth: 280,
       autoControls: true,
@@ -43,10 +39,8 @@ window.addEventListener("load", function () {
       maxSlides: slideNum /*반응형 옵션*/,
     };
   }
-
   function configureSlider() {
     var config = buildSliderConfiguration();
-
     if ($slider && $slider.reloadSlider) {
       $slider.reloadSlider(config);
     } else {
@@ -56,23 +50,17 @@ window.addEventListener("load", function () {
         ); /* 슬라이더 클래스 또는 아이디 입력 */
     }
   }
-
   $(".slider-prev").click(function () {
     var current = $slider.getCurrentSlide();
     $slider.goToPrevSlide(current) - 1;
   });
-
   $(".slider-next").click(function () {
     var current = $slider.getCurrentSlide();
     $slider.goToNextSlide(current) + 1;
   });
-
   $(window).on("orientationchange resize", configureSlider);
   configureSlider();
 });
-
-// --------------------------
-// --------------------------
 // 이미지 클릭
 $(function () {
   // 변수 선언
@@ -81,7 +69,6 @@ $(function () {
   var closeButton = popup.find("> .popup-inner > .close-btn");
   var htmlAndBody = $("html, body");
   var focusTarget;
-
   // 팝업 생성
   imageButton.on("click", function (e) {
     e.preventDefault();
@@ -93,7 +80,6 @@ $(function () {
     popupImg.attr("src", src).attr("alt", alt);
     createPopup();
   });
-
   // 팝업 제거
   popup.on("click", function () {
     removePopup();
@@ -102,12 +88,10 @@ $(function () {
     e.preventDefault();
     removePopup();
   });
-
   // 팝업창 검은배경과 닫기 버튼을 제외한 나머지 부분 클릭시 닫히지 않도록 하기
   popup.find("> .popup-inner").on("click", function (e) {
     e.stopPropagation();
   });
-
   // 팝업 생성 함수
   function createPopup() {
     popup.addClass("active");
@@ -123,11 +107,6 @@ $(function () {
     htmlAndBody.css("overflow-y", "visible");
   }
 });
-
-// --------------------------------자세히보기 팝업-------
-//<![CDATA[
-
-//]]>
 // --------------------------------
 $(function () {
   $("#contents2").click(function () {
@@ -138,5 +117,4 @@ $(function () {
     $("#popup").fadeOut();
   });
 });
-
 // jQuery 존재하는지 판단하여 없으면 스크립트 CDN 삽입
