@@ -5,6 +5,7 @@
   background: url("../images/main_1.png") no-repeat;
   background-position: center center;
   background-size: cover;
+  user-select: none;
 }
 .ararium-title {
   position: absolute;
@@ -13,6 +14,8 @@
   color: rgb(255, 255, 255);
   text-align: center;
   top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 500;
 }
 .mainlogo {
@@ -22,16 +25,7 @@
   font-weight: 700;
   color: white;
   text-align: center;
-  -webkit-box-reflect: below -1.1vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
-
-  /* background-image: url("../images/textinner.png");
-  background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-    
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent; */
+  -webkit-box-reflect: below -1.3vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
 }
 /* 왼쪽 컨텐츠 */
 .leftcontent {
@@ -83,11 +77,20 @@
   align-items: center;
 }
 .animal-intro-text h4 {
-  color: rgba(255, 255, 255, 0.9);
   font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 700;
   margin-bottom: 13px;
   text-shadow: 1px 1px 1px #333;
+}
+.animal-intro-text p {
+  height: 60px;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: #f0f0f0;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 2px 3px rgb(56, 56, 56);
 }
 
 @media all and (max-width: 1680px) {
@@ -99,34 +102,29 @@
   }
 }
 @media all and (max-width: 1280px) {
-  .visualtext {
-    font-size: 3.5rem;
-  }
-  .visualtext > span {
-    font-size: 2.8rem;
-  }
   .animal-intro-text h4 {
     font-size: 1.2rem;
   }
+  .mainlogo {
+    -webkit-box-reflect: below -1.6vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
+  }
 }
 @media all and (max-width: 1024px) {
+  .mainlogo {
+    -webkit-box-reflect: below -2vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
+  }
 }
 @media all and (max-width: 760px) {
-  .visualtext {
-    font-size: 3.3rem;
+  .ararium-title {
+    font-size: 1.2rem;
+    top: 40%;
   }
-  .visualtext > span {
-    font-size: 2.6rem;
-  }
-  .animal-intro-text h4 {
-    font-size: 0.9rem;
+  .mainlogo {
+    font-size: 5.5rem;
   }
 }
 @media all and (max-width: 480px) {
-  .visualtext {
-    font-size: 3rem;
-  }
-  .visualtext > span {
-    font-size: 2.3rem;
+  .mainlogo {
+    -webkit-box-reflect: below -3.5vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
   }
 }
