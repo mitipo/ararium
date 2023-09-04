@@ -2,8 +2,9 @@
 .eventfooter {
   position: relative;
   height: 100vh;
-  background: url("../images/main5.jpg") no-repeat;
-  background-position: bottom center;
+  background: url("../images/main5.png") no-repeat;
+  background-position-y: 70%;
+  /* background-position: bottom center; */
   background-size: cover;
 }
 .event .inner {
@@ -12,7 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-top: 5%; */
 }
 .event-title {
   width: 100%;
@@ -30,11 +30,10 @@
   cursor: pointer;
 }
 .eventtext {
-  width: 100px;
-  height: 30px;
   position: absolute;
   display: block;
   background-color: rgba(0, 132, 255);
+  padding: 10px 25px;
   color: #fff;
   z-index: 99999;
   text-align: center;
@@ -46,6 +45,8 @@
   justify-content: center;
   align-items: center;
   z-index: 9999999999;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 .event .swiper-slide:hover img {
   filter: brightness(0.4);

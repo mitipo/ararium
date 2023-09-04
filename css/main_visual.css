@@ -2,31 +2,79 @@
 .visual {
   position: relative;
   height: 100vh;
-  background: url("../images/17.png") no-repeat;
+  background: url("../images/main_1.png") no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.ararium-title {
+  position: absolute;
+  width: 100%;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  top: 40%;
+  font-weight: 500;
+}
+.mainlogo {
+  margin-top: 7px;
+  display: block;
+  font-size: 5.8rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  -webkit-box-reflect: below -1.1vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.27)));
+
+  /* background-image: url("../images/textinner.png");
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+    
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent; */
 }
 /* 왼쪽 컨텐츠 */
 .leftcontent {
   position: absolute;
-  top: 19%;
+  bottom: 10%;
   left: 25px;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
 }
-/* 문구 */
-.visualtext {
-  font-size: 3.8rem;
-  font-weight: 900;
-  color: rgba(253, 253, 253, 0.925);
-  line-height: 1.4;
-  margin-bottom: 240px;
-  user-select: none;
-  text-shadow: 1px 1px 1px #333;
+/* 아라리움 뉴스 */
+.animalintro h4 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 1px 2px 3px rgb(56, 56, 56);
 }
-.visualtext > span {
-  display: block;
-  font-size: 3rem;
+.animalintro p {
+  height: 60px;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  padding: 10px 0;
+  color: #f0f0f0;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 2px 3px rgb(56, 56, 56);
+}
+.swiper {
+  width: 450px;
+}
+.swiper-wrapper {
+  width: 450px;
+}
+.visual .fa-chevron-left,
+.visual .fa-chevron-right {
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 2px 3px rgb(56, 56, 56);
+  margin-bottom: 30px;
 }
 /* 동물 소개 */
 .animalintro {
@@ -34,83 +82,21 @@
   justify-content: left;
   align-items: center;
 }
-.animalintro .gobtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgba(235, 235, 235, 0.4);
-  border: none;
-  margin-right: 30px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.95);
-}
-.animalintro .gobtn .gobtn-innercircle {
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.95);
-}
 .animal-intro-text h4 {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 13px;
   text-shadow: 1px 1px 1px #333;
 }
+
+@media all and (max-width: 1680px) {
 .animal-intro-text p {
   color: #f0f0f0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-shadow: 1px 1px 1px #333;
   font-weight: 500;
-}
-/* 오른쪽 컨텐츠 */
-.rightcontent {
-  width: 270px;
-  height: 100px;
-  position: absolute;
-  top: 42%;
-  right: 25px;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.2rem;
-  text-align: right;
-  font-weight: 700;
-}
-/* 아라리움 뉴스 */
-.rightcontent h4 {
-  text-align: left;
-  text-shadow: 1px 1px 1px #333;
-}
-.rightcontent p {
-  height: 80px;
-  font-size: 0.75rem;
-  line-height: 1.65;
-  padding: 10px 0;
-  color: #f0f0f0;
-  font-weight: 500;
-  text-align: left;
-  text-shadow: 1px 1px 1px #333;
-}
-.swiper {
-  width: 100%;
-}
-.swiper-wrapper {
-  width: 100%;
-}
-.visual .fa-chevron-left,
-.visual .fa-chevron-right {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  cursor: pointer;
-  text-shadow: 1px 1px 1px #333;
-}
-@media all and (max-width: 1680px) {
+  }
 }
 @media all and (max-width: 1280px) {
   .visualtext {
@@ -120,10 +106,7 @@
     font-size: 2.8rem;
   }
   .animal-intro-text h4 {
-    font-size: 1.1rem;
-  }
-  .rightcontent {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 @media all and (max-width: 1024px) {
@@ -136,9 +119,6 @@
     font-size: 2.6rem;
   }
   .animal-intro-text h4 {
-    font-size: 0.9rem;
-  }
-  .rightcontent {
     font-size: 0.9rem;
   }
 }
