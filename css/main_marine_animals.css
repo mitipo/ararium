@@ -69,7 +69,7 @@ div.clickEffect {
 #bb-outer .bubbles .bubble {
   position: absolute;
   border-radius: 50%;
-  bottom: 20px;
+  bottom: 5px;
   background: rgba(113, 186, 255, 0.7);
 }
 #bb-outer .bubbles h2 {
@@ -228,8 +228,6 @@ div.clickEffect {
   height: 35px;
   position: relative;
   display: block;
-  /* background: url("../images/main_marine_animals_jelly2.png")no-repeat center; */
-  /* transform: rotateZ(45deg) scale(0.05); */
 }
 .jellyfish li {
   animation: swing2 80s linear 0.1s infinite;
@@ -409,18 +407,18 @@ div.clickEffect {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   font-size: 33px;
-  color: #fff;
+  color: #0f97e7;
   display: block;
-  padding-right: 20px;
+
   user-select: none;
   padding-bottom: 5px;
 }
-.marineanimal-title h2:hover {
-  color: #0f97e7;
-}
-.marineanimal-title h2 span {
-  font-size: 23px;
+
+.marineanimal-title span {
+  font-size: 18px;
+  color: #90d6ee;
   user-select: none;
+  padding-bottom: 10px;
 }
 .marineanimal-ex .marineanimal-in .marineanimal-txt {
   font-family: "Noto Sans KR", sans-serif;
@@ -474,7 +472,7 @@ div.clickEffect {
   position: absolute;
   top: 75%;
   left: 35%;
-  background-color: rgba(61, 139, 255, 0.4);
+  background-color: #66f2d4;
 }
 .marineanimal .marineanimal-box .dot_3 {
   position: absolute;
@@ -510,7 +508,7 @@ div.clickEffect {
 .marineanimal .marineanimal-box .dot_2::after,
 .marineanimal .marineanimal-box .dot_4::before,
 .marineanimal .marineanimal-box .dot_4::after {
-  background: rgba(0, 101, 252, 0.4);
+  background-color: #66f2d4;
 }
 
 .marineanimal .marineanimal-box .dot_1::after,
@@ -566,7 +564,7 @@ div.clickEffect {
     height: 500px;
   }
   .marineanimal-title {
-    padding-top: 180px;
+    padding-top: 157px;
   }
   .marineanimal-title h2 {
     font-size: 30px;
@@ -578,8 +576,8 @@ div.clickEffect {
     z-index: 2000;
   }
   .marineanimal-ex .marineanimal-in .marineanimal-txt ul {
-    margin-top: 30px;
-    height: 50%;
+    margin-top: 65px;
+    height: 45%;
     overflow-y: auto;
   }
   .marineanimal-ex .marineanimal-in .marineanimal-txt li {
@@ -646,11 +644,14 @@ div.clickEffect {
     width: 400px;
     height: 600px;
   }
-  .marineanimal-title h2 {
-    font-size: 22px;
+  .marineanimal-title {
+    padding-top: 193px;
   }
-  .marineanimal-title h2 > span {
-    font-size: 18px;
+  .marineanimal-title h2 {
+    font-size: 25px;
+  }
+  .marineanimal-title span {
+    font-size: 16px;
   }
   .marineanimal .marineanimal-box .ani1 {
     width: 300px;
