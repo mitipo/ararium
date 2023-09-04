@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
       autoHover: true,
       adaptiveHeight: true,
       pager: false,
-      moveSlides: 1,
+      moveSlides: 2,
       slideMargin: slideMargin /*반응형 옵션*/,
       minSlides: slideNum /*반응형 옵션*/,
       maxSlides: slideNum /*반응형 옵션*/,
