@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
     },
     breakpoints: {
       480: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 10,
       },
       760: {
