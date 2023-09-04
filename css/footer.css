@@ -110,6 +110,11 @@
   border-radius: 50%;
   border: 2px solid #fff;
   color: #fff;
+  transition: all 0.2s;
+}
+.topbtn:hover{
+  background-color: #fff;
+  color: #000;
 }
 @media all and (max-width: 1680px){
   
