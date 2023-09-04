@@ -2,8 +2,9 @@
 .eventfooter {
   position: relative;
   height: 100vh;
-  background: url("../images/main5.jpg") no-repeat;
-  background-position: bottom center;
+  background: url("../images/main5.png") no-repeat;
+  background-position-y: 70%;
+  /* background-position: bottom center; */
   background-size: cover;
 }
 .event .inner {
