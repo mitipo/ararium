@@ -1,4 +1,4 @@
-window.addEventListener("load", function () { 
+window.addEventListener("load", function () {
   var $slider;
 
   function buildSliderConfiguration() {
@@ -124,13 +124,12 @@ $(function () {
   }
 });
 
-   // --------------------------------자세히보기 팝업-------
-  //<![CDATA[
-
+// --------------------------------자세히보기 팝업-------
+//<![CDATA[
 
 //]]>
 // --------------------------------
-$(function() {
+$(function () {
   $("#contents2").click(function () {
     $("#popup").fadeIn();
   });
