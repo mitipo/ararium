@@ -104,7 +104,7 @@ li {
 }
 .banner-text p {
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
   /* font-weight: 600; */
   width: 100%;
@@ -566,29 +566,41 @@ li {
   }
 }
 @media all and (max-width: 1070px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   #contents2 {
     margin-left: 2%;
   }
 }
 @media all and (max-width: 820px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   #contents2 {
     margin-left: 12%;
     top: 105%;
   }
 }
 @media all and (max-width: 795px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   #contents2 {
     margin-left: 12%;
   }
 }
 @media all and (max-width: 760px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   #ag_2 {
     left: 84%;
     top: 24%;
   }
   #contents2 {
-    margin-left: 22%;
-    top: 105%;
+    margin-left: 10%;
+    left: -20;
   }
   .alpaka_gif img {
     width: 60px;
@@ -639,6 +651,9 @@ li {
   }
 }
 @media all and (max-width: 748px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   .banner-text h2 {
     width: 100%;
     text-align: center;
@@ -654,6 +669,9 @@ li {
   }
 }
 @media all and (max-width: 670px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   .container .img-popup {
     position: absolute;
     top: 36%;
@@ -701,7 +719,20 @@ li {
     display: none;
   }
 }
+@media all and (max-width: 686px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
+}
+@media all and (max-width: 750px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
+}
 @media all and (max-width: 550px) {
+  .banner-text p {
+    margin-top: 10px;
+  }
   #popup {
     width: 550px;
     height: 100%;
@@ -717,7 +748,6 @@ li {
   }
   .banner-text p {
     font-size: 13px;
-    margin-top: 30px;
     text-align: center;
     /* font-weight: 600; */
     width: 100%;
@@ -729,6 +759,9 @@ li {
     background: rgba(0, 0, 0, 0.85);
     /* margin: 0 auto; */
     margin-top: -80px;
+  }
+  #contents2 {
+    margin-left: -200px;
   }
 }
 @media all and (min-width: 200px) {
@@ -760,6 +793,7 @@ li {
   background: rgba(0, 0, 0, 0.85);
   /* margin: 0 auto; */
   margin-top: -80px;
+  z-index: 9999999999;
 }
 #popmenu {
   position: absolute;
