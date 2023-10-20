@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   outline-style: none;
-  scroll-behavior: smooth;
 }
 ul,
 li {
@@ -19,12 +18,12 @@ img {
   border: 0;
 }
 html,
-body{
+body {
   width: 100%;
-  overflow-x: hidden;
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "NanumSquareNeo-Variable", "Noto Sans KR", sans-serif;

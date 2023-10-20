@@ -1,162 +1,17 @@
-/* 상단 */
-.header {
-  position: relative;
-  width: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  height: 70px;
-  z-index: 99999;
-}
+/* 헤더 */
 .header .inner {
   width: 100%;
-  padding: 0px 25px;
-  margin: 0 auto;
-  max-width: 1600px;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* 네비게이션바 */
-.nav_bar {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-/* 로고 */
-.logo img {
-  width: 152px;
-}
-/* 메뉴 */
-.gnb {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 0 130px;
-  height: 100%;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-.gnb > li {
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  background-color: #efebe9;
+  max-width: 1920px;
+  position: fixed;
+  z-index: 99999;
 }
-.gnb > li > a {
-  display: block;
-  color: white;
-}
-.gnb > li:hover > a {
-  color: #0f97e7;
-  font-weight: 700;
-}
-/* 서브메뉴 */
-.submenu {
-  position: absolute;
-  top: 70px;
-  display: none;
-  overflow: hidden;
-  font-size: 0.9rem;
-  z-index: 999;
-}
-.submenu > li > a {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-}
-.submenu li:hover a {
-  color: #0f97e7;
-}
-.navbar_toggleBtn {
-  display: none;
-  position: absolute;
-  font-size: 24px;
-  right: 0;
-  color: #fff;
-}
-#header-xmark {
-  display: none;
-}
-@media all and (max-width: 1680px){
-  .nav_bar > ul {
-    gap: 0 120px;
-  }
-}
-@media all and (max-width: 1280px){
-  .nav_bar > ul {
-    gap: 0 90px;
-  }
-}
-@media all and (max-width: 1024px){
-  .nav_bar > ul {
-    gap: 0 47px;
-  }
-}
-@media all and (max-width: 760px){
-  .header {
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .header .inner {
-    padding: 0px;
-  }
-  .logo img {
-    margin-left: 20px;
-  }
-  .gnb > li {
-    display: block;
-  }
-  .nav_bar {
-    width: 100%;
-    padding: 8px 0px;
-    position: relative;
-  }
-  .gnb {
-    display: none;
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    align-items: center;
-    justify-content: left;
-    flex-direction: column;
-    text-align: left;
-    gap: 0px;
-  }
-  .gnb > li {
-    position: relative;
-    width: 100%;
-    padding: 20px 25px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .gnb > li > a {
-    position: relative;
-    width: 100%;
-    display: block;
-  }
-  .submenu {
-    width: 100%;
-    position: relative;
-    top: 15px;
-  }
-  .submenu > li > a {
-    text-align: left;
-    color: #fff;
-  }
-  .navbar_toggleBtn {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  .gnb.active {
-    display: flex;
-  }
-}
-@media all and (max-width: 480px){
-  
+.header_logo {
+  width: 130px;
+  height: 130px;
+  margin-top: 10px;
 }
